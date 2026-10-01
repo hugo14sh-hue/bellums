@@ -296,8 +296,9 @@ button {
    ============================================= */
 
 .site-footer {
-  background-color: #0a0a0a;
-  color: rgba(255,255,255,0.8);
+  background-color: #ffffff;
+  color: var(--color-text);
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .footer-top {
@@ -305,7 +306,7 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   padding: 3rem 0 2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .footer-contact-box {
@@ -315,7 +316,7 @@ button {
   text-align: center;
   gap: 0.5rem;
   padding: 1.5rem 1rem;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  border-right: 1px solid rgba(0,0,0,0.07);
 }
 
 .footer-contact-box:last-child {
@@ -345,12 +346,12 @@ button {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-white);
+  color: var(--color-black);
   margin-bottom: 0.25rem;
 }
 
 .footer-contact-box a {
-  color: rgba(255,255,255,0.7);
+  color: var(--color-grey-text);
   font-size: 0.9rem;
   transition: color 0.2s;
   display: block;
@@ -378,7 +379,7 @@ button {
 }
 
 .footer-brand p {
-  color: rgba(255,255,255,0.65);
+  color: var(--color-grey-text);
   font-size: 0.9rem;
   margin-bottom: 1.25rem;
 }
@@ -391,7 +392,7 @@ button {
 .footer-social a {
   width: 38px;
   height: 38px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -407,6 +408,10 @@ button {
 .footer-social a svg {
   width: 16px;
   height: 16px;
+  fill: var(--color-black);
+}
+
+.footer-social a:hover svg {
   fill: var(--color-white);
 }
 
@@ -416,7 +421,7 @@ button {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-white);
+  color: var(--color-black);
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--color-accent);
@@ -428,7 +433,7 @@ button {
 }
 
 .footer-col ul li a {
-  color: rgba(255,255,255,0.65);
+  color: var(--color-grey-text);
   font-size: 0.9rem;
   transition: color 0.2s, padding-left 0.2s;
   display: flex;
@@ -449,13 +454,13 @@ button {
 }
 
 .footer-copyright {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(0,0,0,0.08);
   padding: 1.25rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.45);
   flex-wrap: wrap;
   gap: 0.5rem;
 }

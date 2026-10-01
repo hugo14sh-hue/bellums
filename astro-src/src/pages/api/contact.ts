@@ -28,8 +28,8 @@ export const POST: APIRoute = async ({ request }) => {
   const meddelande = data.get('meddelande')?.toString().trim() ?? '';
 
   // Validering
-  if (!namn || !epost || !ort || !tjanst || !meddelande) {
-    return new Response(JSON.stringify({ error: 'Namn, e-post, ort, tjänst och meddelande är obligatoriska.' }), {
+  if (!namn || !telefon || !epost || !ort || !tjanst || !meddelande) {
+    return new Response(JSON.stringify({ error: 'Namn, telefon, e-post, ort, tjänst och meddelande är obligatoriska.' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
     });
@@ -129,7 +129,7 @@ ${meddelande}
   try {
     await resend.emails.send({
       from: 'Bellums Kontaktformulär <noreply@bellums.se>',
-      to: ['hampus@bellums.se'],
+      to: ['hampus@bellums.se', 'Leads@effektivmedia.nu'],
       replyTo: epost,
       subject: `Ny offertförfrågan från ${namn} – Bellums Volym Två AB`,
       html: htmlBody,
