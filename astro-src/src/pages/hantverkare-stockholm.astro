@@ -1,0 +1,248 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Hantverkare Stockholm",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bellums Volym Två AB",
+    "telephone": "+46709122589",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Solna",
+      "addressCountry": "SE"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Stockholm"
+  }
+};
+---
+
+<PageLayout
+  title="Hantverkare Stockholm – Bellums Volym Två AB"
+  description="Erfarna hantverkare i Stockholm för renovering, snickeri, golvarbeten och montage. Från Vasastan till Bromma – svar inom 24 h, 2 års garanti, F-skatt godkänd."
+  jsonLd={jsonLd}
+>
+
+  <!-- ===== BREADCRUMB-HERO ===== -->
+  <section class="breadcrumb-hero" aria-label="Hantverkare i Stockholm">
+    <img
+      class="breadcrumb-hero__bg"
+      src="/images/kund/bellums-team-renovering-lagenhet.webp"
+      alt="Bellums hantverkare arbetar med renovering i Stockholmslägenhet"
+      width="1260"
+      height="945"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="breadcrumb-hero__content">
+        <nav aria-label="Brödsmulor" class="breadcrumb-nav">
+          <ol>
+            <li><a href="/">Hem</a></li>
+            <li aria-hidden="true">›</li>
+            <li aria-current="page">Hantverkare Stockholm</li>
+          </ol>
+        </nav>
+        <h1>Hantverkare i Stockholm</h1>
+        <p>Vi utför renovering, snickeri, golvarbeten och montage i Stockholms stad – med noggrann kommunikation och 2 års garanti.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO-TEXT ===== -->
+  <section class="section-gap" aria-labelledby="intro-heading-hs">
+    <div class="container">
+      <div class="page-intro">
+        <div class="page-intro__text">
+          <span class="label">Hantverkare du kan lita på</span>
+          <h2 id="intro-heading-hs">Bred kompetens för Stockholms alla bostadstyper</h2>
+          <p>Stockholm är en stad med stor variation i boende – sekelskifteshus i Kungsholmen med originalparkett, 60-talsfastigheter i Älvsjö med plankgolv som sällan renoverats, och nybyggnation i ytterstadsdelar där det handlar om installation och montage snarare än restaurering. Vi på Bellums tar oss an allt det – renovering, snickeri, golvläggning, köksmontering och liknande hantverksarbeten i hela Stockholms stad. Vi är tillgängliga vardagar 06–19 och lördag 09–16, och svarar alltid på förfrågningar inom 24 timmar.</p>
+          <p>Trygghet vid anlitning av hantverkare handlar om klara avtal, F-skattsedel och en känd reklamationsrätt. Vi arbetar med godkänd F-skatt och lämnar 2 års garanti på allt utfört arbete, i enlighet med <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/" rel="noopener noreferrer" target="_blank">konsumenttjänstlagen</a>. Mer om vad du bör kräva av en hantverkare hittar du hos <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverket</a>. Vi har genomfört 53 uppdrag med 4,25 av 5 i kundbetyg på Servicefinder.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VAD INGÅR / PROCESS ===== -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-labelledby="process-heading-hs">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Tjänster</span>
+        <h2 id="process-heading-hs">Vad vi hjälper dig med i Stockholm</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Snickeri och renovering</h3>
+            <p>Vi utför snickerijobb och renoveringsarbeten av alla storlekar – från att sätta upp en ny vägg till att renovera ett helt kök eller badrum. Vi arbetar i bostadsrätter, villor och kommersiella lokaler i Stockholm.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Golvarbeten – slipning och läggning</h3>
+            <p>Golvslipning, lackering, oljebehandling och läggning av nytt trägolv eller parkett. Vi hanterar hela processen från förberedelse till färdigt golv, inklusive dammfria metoder i BRF-fastigheter.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Montage och installation</h3>
+            <p>Köksmontering, platsbyggd förvaring, montering av möbler från platt-paket och liknande installationsarbeten. Vi säkerställer att slutresultatet är stabilt, snyggt och på rätt ställe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-gap faq-section" aria-label="Vanliga frågor om hantverkare i Stockholm">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">FAQ</span>
+        <h2>Vanliga frågor om att anlita hantverkare i Stockholm</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Vad ska jag tänka på när jag anlitar en hantverkare i Stockholm?</summary>
+          <div class="faq-answer">
+            <p>Begär alltid ett skriftligt offertunderlag och kontrollera att hantverkaren har F-skattsedel. Vi är F-skatt-godkända och lämnar alltid skriftlig offert och avtal. Det är också klokt att ta del av <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverkets råd om att anlita hantverkare</a> – de beskriver vad som ska ingå i ett avtal och vilka rättigheter du har.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Täcker ROT-avdraget hantverksarbeten i Stockholm?</summary>
+          <div class="faq-answer">
+            <p>Ja, de flesta hantverksarbeten som utförs i ditt hem – renovering, golvarbeten, montage – kan kvalificera för ROT-avdrag om du äger bostaden (villa eller bostadsrätt). Du drar av 30 % av vår arbetskostnad. Vi arbetar alltid med godkänd F-skattsedel, vilket är ett krav för att ROT ska gälla. Mer om regelverket hos <a href="https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html" rel="noopener noreferrer" target="_blank">Skatteverket</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Hur snabbt kan ni komma ut i Stockholm?</summary>
+          <div class="faq-answer">
+            <p>Vi svarar på alla förfrågningar inom 24 timmar och försöker planera in besök och start så snabbt kalendern tillåter. Vi arbetar i hela Stockholm – innerstad som Vasastan och Kungsholmen, och ytterstad som Bromma och Enskede. Inga extra resekostnader inom Stockholm.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vilka hantverksarbeten utför ni inte?</summary>
+          <div class="faq-answer">
+            <p>Vi är generalister med spetskompetens inom golv, renovering och snickeri. Elinstallationer och VVS-arbeten som kräver legitimation utför vi inte – vid sådana jobb hänvisar vi till lämplig samarbetspart. Är du osäker på om ditt uppdrag passar oss, kontakta oss så berättar vi ärligt.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vad gäller om jag inte är nöjd med utfört arbete?</summary>
+          <div class="faq-answer">
+            <p>Vi lämnar 2 års garanti på allt arbete vi utför. Om något inte stämmer hör du av dig till oss direkt – vi löser det. Enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/" rel="noopener noreferrer" target="_blank">konsumenttjänstlagen</a> har du rätt att reklamera fel i ett hantverksarbete inom tre år efter utfört jobb.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA-BANNER ===== -->
+  <section class="cta-banner" aria-label="Begär offert">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2>Ditt projekt i Stockholm – vi hjälper dig.</h2>
+        <p>Beskriv ditt uppdrag och vi återkommer med offert inom 24 timmar. Kostnadsfritt. F-skatt, 2 års garanti.</p>
+        <div class="cta-banner__btns">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="tel:+46709122589" class="btn btn-dark">Ring 070-912 25 89</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERNA LÄNKBLOCKAR ===== -->
+  <section class="local-links section-gap" aria-label="Fler områden och tjänster">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Fler områden</span>
+        <h2>Hantverk i hela Stockholmsregionen</h2>
+      </div>
+      <div class="local-links__grid">
+        <a href="/hantverkare-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare i Danderyd
+        </a>
+        <a href="/hantverkare-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverk på Östermalm
+        </a>
+        <a href="/hantverkare-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare i Sollentuna
+        </a>
+        <a href="/golvslippning-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/></svg>
+          Golvslippning i Stockholm
+        </a>
+        <a href="/om-oss" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          Om oss
+        </a>
+        <a href="/kontakt" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Kontakta oss
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<style>
+.breadcrumb-hero__content p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0; }
+.breadcrumb-nav ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1rem; font-size: 0.875rem; }
+
+.page-intro__text { max-width: 780px; }
+.page-intro__text h2 { margin-top: 0.5rem; }
+
+.process-list { display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin-top: 2rem; }
+.process-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.process-icon { flex-shrink: 0; width: 52px; height: 52px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; }
+.process-item h3 { margin: 0 0 0.5rem; }
+.process-item p { margin: 0; color: var(--color-grey-text); }
+
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px; }
+.faq-item { border: 1px solid var(--color-grey-mid); border-radius: 4px; overflow: hidden; }
+.faq-question { padding: 1.25rem 1.5rem; font-family: var(--font-button); font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after { content: '+'; font-size: 1.5rem; color: var(--color-accent); transition: transform 0.2s; }
+details[open] .faq-question::after { content: '−'; }
+.faq-answer { padding: 0 1.5rem 1.25rem; color: var(--color-grey-text); font-size: 0.9375rem; }
+.faq-answer p { margin: 0; }
+.faq-answer a { color: var(--color-accent); }
+</style>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+</script>

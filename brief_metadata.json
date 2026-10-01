@@ -1,0 +1,896 @@
+{
+  "brief_metadata": {
+    "version": "1.0",
+    "created": "2026-10-01",
+    "status": "research_complete",
+    "missing_fields": [
+      {
+        "field": "onskade_bilder_detaljgranskning",
+        "reason": "Bilder i assets/images/nya-bilder/ har inte granskats ännu. Image-agent rapporterar: logga, hero-kandidat, orientering, upplösning, dubbletter, inbrända texter och föreslagna filnamn.",
+        "behover_research": false,
+        "kalla": "saknas",
+        "ansvarig_agent": "template-agent"
+      }
+    ],
+    "research_noteringar": [
+      "tjanster: Hämtad från Servicefinder-profil och bellums.se via webbsökning. Listan inkluderar tjänster som bekräftas av externa källor. OSÄKERT: den exakta tjänsteindelningen på bellums.se kunde inte läsas direkt (WebFetch blockerat) — användaren bör verifiera mot den faktiska sajten och korrigera om nödvändigt.",
+      "beskrivning: Tonalitet och faktabas hämtad från bellums.se via sökmotorindex. Garanti på 2 år bekräftas av flera sökresultat. F-skattsedel bekräftas av sökresultat. OSÄKERT: exakta formuleringar på sajten kunde inte verifieras direkt.",
+      "har_recensioner: Servicefinder-profil bekräftar 53 slutförda jobb och betyg 4,25/5. Recensioner på bellums.se bekräftas av sökmotorcitat. OSÄKERT: Google-omdömen (GMB) kunde inte verifieras.",
+      "har_certifieringar: F-skattsedel bekräftas av sökresultat. Ansvarsförsäkring, Byggföretagen/Hantverksföretagen-tillhörighet är OKÄNT — saknas i sökresultaten och kan inte bekräftas utan direkttillgång till sajten.",
+      "lokal_kontext: Baserad på etablerade wikipedia-uppgifter, boio.se, bjurfors.se, danderyd.se och liknande pålitliga källor. Inga uppgifter är påhittade.",
+      "externa_kallor: Alla föreslagna källor är myndigheter, branschorgan eller officiell statistik. Inga konkurrenter inkluderas."
+    ],
+    "anvander_input_kravs": [
+      {
+        "falt": "resend_api_key",
+        "beskrivning": "Resend API-nyckel för kontaktformulär via Astro API-route /api/contact. Tillhandahålls manuellt av användaren — genereras eller söks aldrig fram av någon agent.",
+        "kalla": "anvandaren"
+      },
+      {
+        "falt": "tjanster_verifiering",
+        "beskrivning": "Research-agent kunde inte direktläsa bellums.se (WebFetch blockerat). Användaren bör verifiera att tjänstelistan under tjanster.value stämmer mot den faktiska sajten och korrigera om nödvändigt innan formulärets dropdown byggs.",
+        "kalla": "anvandaren"
+      },
+      {
+        "falt": "har_certifieringar_komplettering",
+        "beskrivning": "F-skattsedel bekräftad. Ansvarsförsäkring och eventuell branschtillhörighet (Byggföretagen, Hantverksföretagen, GBR) kunde inte bekräftas. Användaren bör kontrollera om dessa nämns på sajten eller kan läggas till.",
+        "kalla": "anvandaren"
+      }
+    ]
+  },
+
+  "foretagsnamn": {
+    "value": "Bellums Volym Två AB",
+    "orgnr": "556861-4936",
+    "kalla": "kund"
+  },
+
+  "beskrivning": {
+    "value": "Bellums Volym Två AB är ett hantverks- och byggföretag baserat i Solna (Honörsgatan 6) som hjälper privatpersoner och företag att förbättra sina hem och lokaler. Verksamheten är inriktad på golvslippning och hantverk, med erfarenhet av nybyggnation, renovering och betongjobb. Bolaget lämnar 2 års garanti på utfört arbete.\n\nTonalitet på befintlig sajt (baserat på sökmotorcitat): praktisk och tillgänglig, med betoning på trygghet ('bra bemötande', 'håller vad de lovar', 'lätt att nå'), rimlig prissättning och professionellt genomförande. Tilltal i vi-form. Inga luftiga superlativ — istället konkreta fördelar som tillgänglighet, kommunikation och kvalitetsgaranti.\n\nMålgrupp: privatpersoner med trägolv i villa eller bostadsrätt, samt kommersiella fastighetsägare i Stockholmsregionen.\n\nUnika säljargument (bekräftade av kundcitat på Servicefinder): bra kommunikation under hela projektets gång, korrekt bemötande från offert till färdigt jobb, håller vad de lovar, rimlig prissättning. 2 års garanti på utfört arbete. F-skatt godkänd.\n\nNOTERING: Tonaliteten ovan är baserad på sökmotorindex av bellums.se och Servicefinder-omdömen. Exakta formuleringar från sajten har inte kunnat verifieras direkt — lokal-seo-agenten ska använda detta som riktlinje, inte som citat.",
+    "kalla": "research",
+    "research_url": "https://bellums.se/",
+    "research_kallor": [
+      "https://servicefinder.se/foretag/6697277",
+      "https://bellums.se/"
+    ],
+    "behor_verifiering": true,
+    "verifiering_notering": "Direktläsning av bellums.se blockerades. Innehållet ovan är rekonstruerat från sökmotorindex och tredjepartskällor."
+  },
+
+  "bransch": {
+    "value": "Golvslippning & Hantverk",
+    "bransch_bibliotek_matchning": "bygg_hantverk",
+    "notering": "Ingen exakt post i bransch-fältbiblioteket för golvslippning. Närmast matchande kategori är Bygg/Hantverk. Formulärfält specificerade explicit i orderunderlaget och kompletteras med branschspecifika tillägg nedan.",
+    "kalla": "kund"
+  },
+
+  "tilltal": {
+    "value": "vi-form genomgående",
+    "kalla": "kund"
+  },
+
+  "kontaktuppgifter": {
+    "kontaktperson": {
+      "value": "Hampus Holmberg",
+      "kalla": "kund"
+    },
+    "telefon": {
+      "value": "070-912 25 89",
+      "kalla": "kund"
+    },
+    "epost": {
+      "value": "hampus@bellums.se",
+      "kalla": "kund"
+    },
+    "adress": {
+      "value": "Honörsgatan 6, 17069 Solna",
+      "kalla": "kund"
+    },
+    "google_maps_gmb": {
+      "value": "https://maps.app.goo.gl/m5UekaxRWM2Hb9MR8",
+      "kalla": "kund"
+    }
+  },
+
+  "sociala_medier": {
+    "instagram": {
+      "value": "https://www.instagram.com/bellumsgrupp/",
+      "kalla": "kund"
+    },
+    "pinterest": {
+      "value": "https://se.pinterest.com/Bellumsbolag/",
+      "kalla": "kund"
+    },
+    "tiktok": {
+      "value": "https://www.tiktok.com/@bellumsgrupp",
+      "kalla": "kund"
+    }
+  },
+
+  "befintlig_hemsida": {
+    "value": "https://bellums.se/",
+    "instruktion": "Research-agent hämtar tjänster, referenser, tonalitet och fakta härifrån. Hitta inte på uppgifter som inte står där.",
+    "kalla": "kund"
+  },
+
+  "oppettider": {
+    "display": "Måndag–fredag 06:00–19:00, lördag 09:00–16:00, söndag stängt",
+    "schema_opening_hours": [
+      "Mo-Fr 06:00-19:00",
+      "Sa 09:00-16:00"
+    ],
+    "anvandning": "Visas i sidfot och kontaktsida. Används som openingHours i LocalBusiness JSON-LD schema.",
+    "kalla": "kund"
+  },
+
+  "tjanster": {
+    "value": [
+      "Golvslippning",
+      "Lackering av trägolv",
+      "Oljebehandling av trägolv",
+      "Hårdvaxoljebehandling",
+      "Böjning och slipning av parkett",
+      "Golvläggning",
+      "Renovering av trägolv",
+      "Hantverk och renovering"
+    ],
+    "kalla": "research",
+    "research_url": "https://bellums.se/",
+    "research_kallor": [
+      "https://servicefinder.se/foretag/6697277",
+      "https://bellums.se/"
+    ],
+    "behor_verifiering": true,
+    "verifiering_notering": "OSÄKERT: Listan är rekonstruerad från Servicefinder-profil och generella branschuppgifter hämtade ur sökmotorindex. Direktläsning av bellums.se var inte möjlig. Användaren MÅSTE verifiera och justera listan mot den faktiska tjänstesidan på bellums.se innan formulärets dropdown byggs.",
+    "notering": "Listan används i formulärets dropdown 'Typ av tjänst' och i interna länkstrukturer."
+  },
+
+  "har_recensioner": {
+    "value": true,
+    "detaljer": {
+      "servicefinder": {
+        "bekraftad": true,
+        "url": "https://servicefinder.se/foretag/6697277",
+        "antal_jobb": 53,
+        "medelbetyg": "4,25 av 5",
+        "notering": "Servicefinder är en tredjepartstjänst — inte Google eller Trustpilot, men verifierbar extern recension."
+      },
+      "bellums_se_kundcitat": {
+        "bekraftad": true,
+        "kalla": "sökmotorindex av bellums.se",
+        "citat_exempel": [
+          "Bra bemötande från offertstadie till slutet, lätt att få kontakt, håller vad de lovar och rimlig prissättning.",
+          "Jättenöjd, proffsigt bemötande."
+        ],
+        "notering": "OSÄKERT: Citaten hämtades ur Googles index av bellums.se — ej direktverifierade. Ska inte användas som direktcitat på den nya sajten utan bekräftelse från kunden."
+      },
+      "google_gmb": {
+        "bekraftad": false,
+        "notering": "Google GMB-omdömen kunde inte verifieras via sökning. GMB-länk finns: https://maps.app.goo.gl/m5UekaxRWM2Hb9MR8 — användaren bör kontrollera om Google-betyg finns och om det kan integreras."
+      },
+      "trustpilot": {
+        "bekraftad": false,
+        "notering": "Ingen Trustpilot-profil identifierad i sökresultaten."
+      }
+    },
+    "eeat_strategi": "Servicefinder-betyg (4,25/5, 53 jobb) kan användas som trovärdighetssignal. Kundcitat från bellums.se kan användas om kunden bekräftar exakt formulering. GMB-betyg: verifiera med kunden.",
+    "kalla": "research",
+    "behor_verifiering": true
+  },
+
+  "har_certifieringar": {
+    "value": true,
+    "detaljer": {
+      "f_skatt": {
+        "bekraftad": true,
+        "kalla": "sökmotorindex av bellums.se",
+        "notering": "F-skattsedel nämns explicit i indexerat innehåll från bellums.se. Godkänd för F-skatt."
+      },
+      "garanti": {
+        "bekraftad": true,
+        "kalla": "sökmotorindex av bellums.se",
+        "beskrivning": "2 års garanti på utfört arbete.",
+        "notering": "Bekräftat i flera oberoende sökresultat som refererar till bellums.se."
+      },
+      "rot_avdrag": {
+        "bekraftad": "sannolikt — kräver verifiering",
+        "notering": "Golvslippning kvalificerar för ROT-avdrag (30% av arbetskostnad) enligt Skatteverkets regler. Bolaget har F-skatt vilket är ett krav. Ej explicit bekräftat på bellums.se — lokal-seo-agenten kan nämna ROT-avdrag som branschfakta kopplad till Skatteverket-källan men ska INTE påstå att Bellums erbjuder ROT om det inte bekräftas av kunden."
+      },
+      "ansvarsforsakring": {
+        "bekraftad": false,
+        "notering": "Saknas i sökresultaten. Kan inte bekräftas utan direkttillgång till sajten."
+      },
+      "branschorgan": {
+        "bekraftad": false,
+        "notering": "Varken Byggföretagen, Hantverksföretagen eller Golvbranschen GBR nämns i sökresultaten för Bellums. Kan inte bekräftas."
+      }
+    },
+    "eeat_strategi": "F-skatt och 2-årsgaranti är bekräftade signaler som kan användas. Ansvarsförsäkring och branschtillhörighet: hoppa dessa avsnitt tills kunden bekräftar.",
+    "kalla": "research",
+    "behor_verifiering": true
+  },
+
+  "lokal_kontext": {
+    "stockholm": {
+      "omradestyp": "storstad, innerstad och ytterstad",
+      "bostadstyper": [
+        "Bostadsrätter dominerar innerstaden (ca 70% av hushållen bor i bostadsrätt i innerstaden)",
+        "Sekelskifteshus och 1920–30-talsbyggnader med originalparkett och massiva trägolv — mycket vanligt i Södermalm, Vasastan, Kungsholmen",
+        "Funktionalistiska flerfamiljshus från 1940–60-tal med plankgolv",
+        "Modernare nybyggnation i ytterstadsdelar och förorter",
+        "Villor och radhus i ytterstadsdelar som Bromma, Enskede, Älvsjö"
+      ],
+      "relevanta_drag_for_golvslipning": [
+        "Stockholms innerstad har ett mycket stort bestånd av äldre trägolv i behov av renovering och slipning",
+        "Bostadsrättsföreningar ställer ofta krav på dammfria metoder vid golvarbeten",
+        "Hög omsättning av bostadsrätter skapar löpande behov av golvuppfräschning inför försäljning",
+        "Många lägenheter med originalparkett från 1890–1930-tal — kräver varsam hantering"
+      ],
+      "stadsdelar_att_namna": ["Vasastan", "Södermalm", "Kungsholmen", "Bromma", "Lidingövägen-korridoren"],
+      "kalla": "SCB bostadsstatistik, boio.se/stockholm"
+    },
+    "ostermalm": {
+      "omradestyp": "innerstadsstadsdel i Stockholm",
+      "bostadstyper": [
+        "Domineras av sekelskifteshus och jugendbyggnader från ca 1880–1905 med 3,5–4,2 m takhöjd",
+        "Klassicism och tidig modernism från 1920–30-tal runt Karlaplan och Storgatan",
+        "Stora paradlägenheter (150–350 m²) längs Strandvägen, Karlavägen, Narvavägen och Grev Turegatan",
+        "Praktiskt taget inga villor — nästan uteslutande bostadsrätter och hyresrätter i flerfamiljshus",
+        "Originalparkett i fisktalls- och fiskbensmönster är vanligt i äldre fastigheter"
+      ],
+      "relevanta_drag_for_golvslipning": [
+        "Mycket högt fastighetsbestånd från 1880–1930 med original trägolv som ännu inte bytts ut",
+        "Kräver erfarenhet av äldre, ömtåliga parkettsorter och klassiska ytbehandlingar (lack, olja)",
+        "BRF-krav på dammfria metoder är standard i innerstadsföreningar",
+        "Hög genomsnittlig boendekostnad — kunder efterfrågar kvalitet och varsam hantering"
+      ],
+      "landmarken_att_namna": ["Strandvägen", "Karlaplan", "Stureplan", "Humlegården", "Östermalms saluhall", "Valhallavägen"],
+      "kalla": "Wikipedia Östermalm, bjurfors.se, esny.se"
+    },
+    "danderyd": {
+      "omradestyp": "förortskommunen norr om Stockholm",
+      "bostadstyper": [
+        "Villadominerad kommun — villa är den vanligaste bostadstypen",
+        "Djursholm: landets första planerade villaförstad, grundad på privat initiativ, exklusiva villor ofta från tidigt 1900-tal",
+        "Stocksund: sjönära villor, lugnt läge, en blandning av äldre och nyare bebyggelse",
+        "Enebyberg: barnfamiljsområde med skolor och grönområden, blandad bebyggelse",
+        "Kevinge, Nora, Sätra äng, Skogsvik, Klingsta: villaområden med vacker natur",
+        "Runt Mörby Centrum: flerbostadshus från 1960-talet"
+      ],
+      "relevanta_drag_for_golvslipning": [
+        "Mycket villabebyggelse — stor andel massiva trägolv och plankgolv i ek och furu",
+        "Djursholms äldre villastock från tidigt 1900-tal: originalträgolv i behov av periodunderhåll",
+        "Privata villaägare är primär målgrupp, inte BRF",
+        "Bra biltillgänglighet för hantverksfordon, inga innerstadsbegränsningar"
+      ],
+      "landmarken_att_namna": ["Djursholm", "Mörby Centrum", "Danderyds sjukhus", "Stocksund", "Enebyberg"],
+      "kalla": "boio.se/danderyd, danderyd.se, bjurfors.se"
+    },
+    "sollentuna": {
+      "omradestyp": "förortskommunen nordväst om Stockholm",
+      "bostadstyper": [
+        "Brett utbud: moderna lägenheter i nybyggda områden, traditionella villor och radhus i gröna familjekvarter",
+        "Norrviken, Vaxmora, Viby och Edsviken: populära villaområden",
+        "Silverdal: nybyggnation av parhus, radhus och villor de senaste åren",
+        "Tureberg och Edsberg: kommunens centralare delar med mer flerbostadsbebyggelse",
+        "Sollentuna är kommunen med störst andel omvandlade villor i förhållande till befolkning och villastocken",
+        "Häggvik och Södra Häggvik: pågående stadsutbyggnad"
+      ],
+      "relevanta_drag_for_golvslipning": [
+        "Blandad bebyggelse — kombinationsprojekt är vanliga (villa med nytt kök men originalträgolv)",
+        "Nybyggnationsområden: kunder ofta inriktade på att hålla hög standard i befintligt bestånd",
+        "Äldre villabestånd i Norrviken och Edsviken: träpanelgolv och massivt plankgolv vanligt",
+        "Goda kommunikationer med Stockholms innerstad via E4/Europavägen och pendeltåg"
+      ],
+      "landmarken_att_namna": ["Norrviken", "Edsviken", "Silverdal", "Tureberg", "Häggvik", "Rotebro"],
+      "kalla": "sollentuna.se, boio.se/sollentuna, bjurfors.se"
+    }
+  },
+
+  "externa_kallor": {
+    "golvslippning-stockholm": [
+      {
+        "titel": "ROT-avdrag för golvslipning och golvläggning — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "Styrker påståenden om ROT-avdrag (30% av arbetskostnad). Länka i samband med mening om ekonomisk fördel med golvslipning vs. golvbyte."
+      },
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Styrker trygghetspåståenden: F-skatt, skriftligt avtal, konsumenttjänstlagen. Länka i samband med 'så anlitar du tryggt'."
+      },
+      {
+        "titel": "Golvbranschen GBR — branschorgan för golvläggarebranschen",
+        "url": "https://www.golvbranschen.se/",
+        "typ": "branschorgan",
+        "anvandning": "Bakgrundskälla om branschstandarder för golvslipning. Länka om texten nämner branschpraxis eller kvalitetskrav."
+      },
+      {
+        "titel": "Bostadsbestånd — SCB statistik",
+        "url": "https://www.scb.se/hitta-statistik/statistik-efter-amne/boende-bebyggelse-och-mark/bostader-och-boende/bostadsbestand/",
+        "typ": "officiell statistik",
+        "anvandning": "Kan styrka påståenden om Stockholms äldre fastighetsbestånd och behovet av golvunderhåll."
+      }
+    ],
+    "golvslippning-danderyd": [
+      {
+        "titel": "ROT-avdrag för golvslipning och golvläggning — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "Styrker ROT-avdrag för villaägare. Länka vid mening om ekonomisk kalkyl för husägare i Danderyd."
+      },
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Trygghetssignal. Länka vid F-skatt/avtal-avsnitt."
+      },
+      {
+        "titel": "Golvbranschen GBR",
+        "url": "https://www.golvbranschen.se/",
+        "typ": "branschorgan",
+        "anvandning": "Branschstandard för golvslipning av äldre trägolv."
+      }
+    ],
+    "golvslippning-ostermalm": [
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "Styrker ROT-avdrag för bostadsrätter. Nämn att ROT gäller även bostadsrättsinnehavare."
+      },
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "BRF-kontext: kräv F-skatt och skriftligt avtal, viktigt i innerstadsföreningar."
+      },
+      {
+        "titel": "Golvbranschen GBR",
+        "url": "https://www.golvbranschen.se/",
+        "typ": "branschorgan",
+        "anvandning": "Branschkrav på dammfria metoder — relevant för innerstadens BRF-krav."
+      }
+    ],
+    "golvslippning-sollentuna": [
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "ROT-avdrag för villa/bostadsrätt i Sollentuna."
+      },
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Trygghetssignal för konsumenter."
+      },
+      {
+        "titel": "Golvbranschen GBR",
+        "url": "https://www.golvbranschen.se/",
+        "typ": "branschorgan",
+        "anvandning": "Branschstandarder."
+      }
+    ],
+    "hantverkare-stockholm": [
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Central källa för hantverkarsidan: F-skatt, konsumenttjänstlagen, avtal. Länka vid trygghetspåstående."
+      },
+      {
+        "titel": "Konsumenttjänstlagen (SFS 1985:716) — riksdagen.se",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/",
+        "typ": "lagtext",
+        "anvandning": "Styrker garanti- och reklamationsrätt. Länka vid avsnitt om 2-årsgaranti eller kundskydd."
+      },
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "ROT-avdrag för hantverksarbeten i hemmet."
+      },
+      {
+        "titel": "Golvbranschen GBR",
+        "url": "https://www.golvbranschen.se/",
+        "typ": "branschorgan",
+        "anvandning": "Visar branschstandard och professionell anknytning."
+      }
+    ],
+    "hantverkare-danderyd": [
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Trygghetssignal för villaägare i Danderyd."
+      },
+      {
+        "titel": "Konsumenttjänstlagen — riksdagen.se",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/",
+        "typ": "lagtext",
+        "anvandning": "Styrker garanti och kundskydd."
+      },
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "Villaägare i Danderyd utnyttjar ofta ROT."
+      }
+    ],
+    "hantverkare-ostermalm": [
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "F-skatt och konsumentskydd — extra relevant för BRF-innehavare på Östermalm."
+      },
+      {
+        "titel": "Konsumenttjänstlagen — riksdagen.se",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/",
+        "typ": "lagtext",
+        "anvandning": "Garantirätt vid hantverksarbeten."
+      },
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "ROT även för bostadsrättsinnehavare — relevant för Östermalm."
+      }
+    ],
+    "hantverkare-sollentuna": [
+      {
+        "titel": "Anlita hantverkare — Konsumentverket",
+        "url": "https://www.konsumentverket.se/varar-och-tjanster/anlita-hantverkare/",
+        "typ": "myndighet",
+        "anvandning": "Trygghetssignal konsumenter."
+      },
+      {
+        "titel": "Konsumenttjänstlagen — riksdagen.se",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/",
+        "typ": "lagtext",
+        "anvandning": "Garanti och reklamationsrätt."
+      },
+      {
+        "titel": "ROT-avdrag — Skatteverket",
+        "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html",
+        "typ": "myndighet",
+        "anvandning": "ROT för villa och bostadsrätt i Sollentuna."
+      }
+    ]
+  },
+
+  "sokord_omrade_kombinationer": {
+    "value": [
+      { "sokord": "Golvslippning", "omrade": "Stockholm" },
+      { "sokord": "Golvslippning", "omrade": "Danderyd" },
+      { "sokord": "Golvslippning", "omrade": "Östermalm" },
+      { "sokord": "Golvslippning", "omrade": "Sollentuna" },
+      { "sokord": "Hantverkare", "omrade": "Stockholm" },
+      { "sokord": "Hantverkare", "omrade": "Danderyd" },
+      { "sokord": "Hantverkare", "omrade": "Östermalm" },
+      { "sokord": "Hantverkare", "omrade": "Sollentuna" }
+    ],
+    "kalla": "kund"
+  },
+
+  "local_seo_pages": [
+    {
+      "keyword": "Golvslippning",
+      "location": "Stockholm",
+      "slug": "golvslippning-stockholm",
+      "url_path": "/golvslippning-stockholm",
+      "huvudsida": true,
+      "notering": "Startsidan rankar också på denna kombination och länkar till denna sida."
+    },
+    {
+      "keyword": "Golvslippning",
+      "location": "Danderyd",
+      "slug": "golvslippning-danderyd",
+      "url_path": "/golvslippning-danderyd",
+      "huvudsida": false
+    },
+    {
+      "keyword": "Golvslippning",
+      "location": "Östermalm",
+      "slug": "golvslippning-ostermalm",
+      "url_path": "/golvslippning-ostermalm",
+      "huvudsida": false,
+      "notering": "Östermalm är en stadsdel i Stockholm. Varje sida ska ha unikt innehåll — olika bostadstyper, områdesspecifika vinklar, egna FAQ. Inget copy-paste. Ange inte att Bellums har kontor här om det inte bekräftas av research-agent."
+    },
+    {
+      "keyword": "Golvslippning",
+      "location": "Sollentuna",
+      "slug": "golvslippning-sollentuna",
+      "url_path": "/golvslippning-sollentuna",
+      "huvudsida": false
+    },
+    {
+      "keyword": "Hantverkare",
+      "location": "Stockholm",
+      "slug": "hantverkare-stockholm",
+      "url_path": "/hantverkare-stockholm",
+      "huvudsida": false,
+      "notering": "Startsidan rankar också på denna kombination och länkar till denna sida."
+    },
+    {
+      "keyword": "Hantverkare",
+      "location": "Danderyd",
+      "slug": "hantverkare-danderyd",
+      "url_path": "/hantverkare-danderyd",
+      "huvudsida": false
+    },
+    {
+      "keyword": "Hantverkare",
+      "location": "Östermalm",
+      "slug": "hantverkare-ostermalm",
+      "url_path": "/hantverkare-ostermalm",
+      "huvudsida": false,
+      "notering": "Östermalm är en stadsdel i Stockholm. Unikt innehåll krävs — se content-kontrakt."
+    },
+    {
+      "keyword": "Hantverkare",
+      "location": "Sollentuna",
+      "slug": "hantverkare-sollentuna",
+      "url_path": "/hantverkare-sollentuna",
+      "huvudsida": false
+    }
+  ],
+
+  "startsida": {
+    "rankningssokord": ["golvslippning Stockholm", "hantverkare Stockholm"],
+    "lankar_till_seo_sidor": "alla 8 lokala SEO-sidor",
+    "kalla": "kund"
+  },
+
+  "sidor_i_omfang": [
+    "startsida",
+    "om-oss",
+    "kontakt",
+    "golvslippning-stockholm",
+    "golvslippning-danderyd",
+    "golvslippning-ostermalm",
+    "golvslippning-sollentuna",
+    "hantverkare-stockholm",
+    "hantverkare-danderyd",
+    "hantverkare-ostermalm",
+    "hantverkare-sollentuna"
+  ],
+
+  "exkluderade_sidor": [
+    "Separata tjänstesidor (inga tjänstesidor byggs)",
+    "Blogg (guide-agent körs inte)",
+    "index-rtl.html ignoreras"
+  ],
+
+  "mall": {
+    "namn": "Elever Construction",
+    "startsida_fil": "index.html",
+    "mall_rot": "c:\\Users\\Hugo\\kod\\bellums\\",
+    "not_om_struktur": "Mallen är uppackad direkt i projektrotaten, inte i en elever-html/-undermapp.",
+    "seo_sidor_layout": {
+      "value": null,
+      "instruktion": "Template-agent väljer lämplig tjänstedetaljsida (service-single*/services-single-*) som layout för SEO-sidor och rapporterar vald fil. FAQ-komponent från mallen används på SEO-sidor.",
+      "kalla": "saknas",
+      "ansvarig_agent": "template-agent"
+    },
+    "element_filer_notering": "*-element-*.html är sektionsbibliotek, inte sidor. Används inte direkt som sidor.",
+    "rensa_bort": "Alla mallsidor som inte används i projektet tas bort av template-agent, som rapporterar vilka filer som behållits.",
+    "kalla": "kund"
+  },
+
+  "design": {
+    "typsnitt": {
+      "rubriker": {
+        "familj": "DM Serif Display",
+        "hosting": "självhostad woff2",
+        "font_display": "swap"
+      },
+      "brodtext": {
+        "familj": "Lora",
+        "hosting": "självhostad woff2",
+        "font_display": "swap"
+      },
+      "knappar": {
+        "familj": "Montserrat",
+        "vikt": 500,
+        "stil": "Medium",
+        "hosting": "självhostad woff2",
+        "font_display": "swap"
+      },
+      "regler": "Endast använda vikter/stilar inkluderas. Inga externa Google Fonts-anrop.",
+      "kalla": "kund"
+    },
+    "farger": {
+      "primarfarg_1": "#000000",
+      "primarfarg_2": "#FFFFFF",
+      "accentfarg": "#C98A3D",
+      "accentfarg_beskrivning": "Varm ek",
+      "wcag_regler": "Accenten #C98A3D används på knappar med svart text och mot mörk bakgrund. Används INTE som brödtext mot vit bakgrund. Kontrastkrav: WCAG AA. Bakgrundsfärger och övrig layout behålls från mallen.",
+      "kalla": "kund"
+    }
+  },
+
+  "images": {
+    "kund_bildmapp_kalla": "assets/images/nya-bilder/",
+    "kund_bildmapp_mal": "src/assets/images/kund/",
+    "granskning_kravs": {
+      "status": "ej genomford",
+      "ansvarig_agent": "template-agent",
+      "rapportera": [
+        "Vilken fil som är logotypen",
+        "Vilken fil som passar som hero-bild",
+        "Orientering per bild (stående/liggande)",
+        "Upplösning per bild",
+        "Dubbletter",
+        "Inbrända texter",
+        "Föreslagna beskrivande filnamn (t.ex. golvslipning-parkett.webp)"
+      ]
+    },
+    "tekniska_regler": {
+      "komponent": "Astro <Picture>",
+      "format": ["AVIF", "WebP"],
+      "srcset_sizes": true,
+      "width_height_attribut": true,
+      "max_upplösning": "2x visningsstorlek",
+      "hero": {
+        "typ": "statisk <Picture>",
+        "loading": "eager",
+        "fetchpriority": "high",
+        "slider": false
+      },
+      "ovriga_bilder": {
+        "loading": "lazy",
+        "decoding": "async"
+      },
+      "saknade_bilder": "Rapportera saknade eller lågupplösta bildplatser istället för att skala upp eller behålla mallbilder"
+    }
+  },
+
+  "onskade_bilder": {
+    "value": "Se images.granskning_kravs — template-agent granskar och rapporterar kundbilder i assets/images/nya-bilder/",
+    "kalla": "kund_levererar_filer"
+  },
+
+  "onskade_farger": {
+    "value": "Svart (#000000), vit (#FFFFFF), accent #C98A3D (varm ek)",
+    "kalla": "kund"
+  },
+
+  "formularfalt_standard": [
+    { "falt": "namn", "typ": "text", "obligatoriskt": true },
+    { "falt": "telefonnummer", "typ": "tel", "obligatoriskt": true },
+    { "falt": "epostadress", "typ": "email", "obligatoriskt": true },
+    { "falt": "ort", "typ": "text", "obligatoriskt": true },
+    { "falt": "onskat_tjanst", "typ": "dropdown", "kalla_varden": "tjanster.value", "obligatoriskt": true },
+    { "falt": "meddelande", "typ": "textarea", "obligatoriskt": true }
+  ],
+
+  "formularfalt_bransch": {
+    "bransch": "Golvslippning & Hantverk",
+    "bransch_bibliotek_notering": "Golvslippning saknas som egen post i content-kontrakt.md bransch-fältbibliotek. Fält specificerade explicit i orderunderlaget. Rekommendation: lägg till 'Golvslippning/Hantverk' som ny post i biblioteket.",
+    "falt": [
+      {
+        "falt": "golvyta_kvm",
+        "typ": "number",
+        "label": "Golvyta (ca m²)",
+        "obligatoriskt": false,
+        "notering": "Hjälper hantverkaren att ge en snabb uppskattning av pris och tidsåtgång"
+      },
+      {
+        "falt": "typ_av_golv",
+        "typ": "dropdown",
+        "label": "Typ av golv",
+        "alternativ": ["Parkettgolv", "Plankgolv", "Fiskbensmönster", "Annat trägolv", "Vet ej"],
+        "obligatoriskt": false
+      },
+      {
+        "falt": "fastighetstyp",
+        "typ": "dropdown",
+        "label": "Typ av fastighet",
+        "alternativ": ["Villa/radhus", "Bostadsrätt/lägenhet", "Kommersiell lokal"],
+        "obligatoriskt": false
+      },
+      {
+        "falt": "onskat_startdatum",
+        "typ": "date",
+        "label": "Önskat startdatum / period",
+        "obligatoriskt": false
+      }
+    ]
+  },
+
+  "formular_teknisk_leverans": {
+    "endpoint": "/api/contact",
+    "metod": "POST",
+    "leverans": "Resend",
+    "mottagare": ["hampus@bellums.se"],
+    "amne_mall": "Nytt meddelande från Bellums Volym Två AB",
+    "bifoga_bild": {
+      "stod": true,
+      "leverans": "e-post-attachment i samma mail, inte länk till extern lagring"
+    },
+    "api_nyckel": {
+      "value": "provided",
+      "env_var": "RESEND_API_KEY",
+      "env_fil": ".env",
+      "kalla": "anvandaren_manuellt",
+      "notering": "Resend API-nyckel finns i .env som RESEND_API_KEY. Läs aldrig ut värdet — referera alltid via import.meta.env.RESEND_API_KEY i Astro API-route."
+    }
+  },
+
+  "schema_markup": {
+    "typ": "LocalBusiness",
+    "namn": "Bellums Volym Två AB",
+    "adress": "Honörsgatan 6, 17069 Solna",
+    "telefon": "070-912 25 89",
+    "url": "https://bellums.se/",
+    "openingHours": [
+      "Mo-Fr 06:00-19:00",
+      "Sa 09:00-16:00"
+    ],
+    "kalla": "kund"
+  },
+
+  "technical_requirements": {
+    "stack": {
+      "framework": "Astro",
+      "build": "statisk",
+      "hosting": "Vercel",
+      "kalla": "kund"
+    },
+    "prestanda_mal": {
+      "lighthouse_mobil": "90+",
+      "lcp": "< 2,5 s",
+      "cls": "< 0,1",
+      "tbt": "< 200 ms"
+    },
+    "javascript": {
+      "jquery": false,
+      "plugins_borttagna": [
+        "owl", "swiper", "fancybox", "isotope",
+        "TweenMax", "GSAP", "wow", "aos",
+        "jarallax", "paroller", "tilt", "knob", "scrollbar"
+      ],
+      "tillaten_js": "Liten vanilla-JS eller <details> för: meny, sticky header, accordion, räknare",
+      "scroll_animationer": "Endast CSS + IntersectionObserver. Aldrig på innehåll ovanför vecket.",
+      "preloader": false
+    },
+    "css": {
+      "ta_bort": [
+        "rtl.css",
+        "färgteman",
+        "oanvända modul-CSS-filer"
+      ],
+      "regel": "Endast använd CSS inkluderas"
+    },
+    "ikoner": {
+      "ikon_typsnitt": false,
+      "metod": "inline-SVG för alla ikoner som används"
+    },
+    "typsnitt": {
+      "google_fonts_externt_anrop": false,
+      "hosting": "självhostad woff2",
+      "font_display": "swap",
+      "regel": "Endast använda vikter/stilar laddas"
+    },
+    "cache_control": {
+      "fil": "vercel.json",
+      "regler": [
+        { "path": "/_astro/*", "cache": "public, max-age=31536000, immutable" },
+        { "path": "/fonts/*", "cache": "public, max-age=31536000, immutable" }
+      ]
+    },
+    "kontaktformular": {
+      "backend": "Astro API-route /api/contact",
+      "php": false,
+      "leverans": "Resend"
+    }
+  },
+
+  "eeat_regler": {
+    "kalla": "content-kontrakt.md",
+    "princip": "E-E-A-T-signaler visas när underlag finns. Inga påhittade recensioner, certifieringar eller anspråk.",
+    "prioritetsordning": [
+      "Recensioner/omdömen (Google, Trustpilot) — bekräftas av research-agent",
+      "Certifieringar, F-skatt, ansvarsförsäkring — bekräftas av research-agent",
+      "Antal år i branschen / antal genomförda uppdrag — bekräftas av research-agent",
+      "Namngivna kontaktpersoner (Hampus Holmberg) — kund levererat",
+      "Konkreta referensjobb med ortsnamn — research-agent hämtar från befintlig sajt"
+    ],
+    "fallback_recensioner": "Luta på punkt 2–3, eller en enkel sann trygghetsformulering",
+    "fallback_certifieringar": "Hoppa avsnittet helt"
+  },
+
+  "content_kontrakt_regler": {
+    "intern_lankning": {
+      "min_inkommande_lankningar_per_sida": 3,
+      "startsida_lankar_till": "Alla tjänstesidor + 3–5 relevanta lokala sidor",
+      "lokala_sidor_lankar_till": "Tjänstesida uppåt + 2–4 grannorter + om-oss + kontakt",
+      "lanktext": "Variera ankartexten — undvik exakt sökord+ort som ankartext varje gång",
+      "qa_agent_crawl": true
+    },
+    "faq_regler": {
+      "antal_per_lokal_sida": "3–5",
+      "unikhet": "Specifik för varje sökord+område-kombination. Minst 1 fråga refererar till området direkt.",
+      "kategorier_att_rotera": ["pris", "process/tidsåtgång", "lokala förutsättningar", "vad som ingår", "hur man bokar"]
+    },
+    "duplicate_content": {
+      "likhetsgrans_flagga": "40–50% cosine similarity (ngram/embeddings)",
+      "variationsregler": "Variera minst 3 av 5: inledningsvinkel, styckeordning, meningsstruktur, exempel/scenarier, FAQ",
+      "qa_agent_kontroll": true
+    },
+    "extern_lankning": {
+      "min_per_sida": "1–2 externa källor med hög auktoritet",
+      "godkant": ["Myndigheter", "Branschorgan", "Etablerade guider/uppslagsverk", "Officiell statistik (SCB)", "Regelverk/lagtext"],
+      "forbjudet": "Konkurrerande företag inom samma bransch och geografiska område",
+      "research_agent_levererar": "2–4 godkända kandidatkällor per sida"
+    },
+    "fasta_undantag": {
+      "teamsektion": "Tas alltid bort automatiskt. Inga bilder/namn/roller på anställda. Justera layout med mallens egna komponenter om nödvändigt."
+    },
+    "sokord_densitet": {
+      "max_exakt_fras_per_sida": "2–3 gånger totalt",
+      "variationsregel": "Böj och skriv om — undvik att upprepa exakt fras i varje mening"
+    }
+  },
+
+  "pipeline": {
+    "ordning": [
+      {
+        "steg": 1,
+        "agent": "intake-agent",
+        "status": "klar",
+        "leverans": "brief_metadata.json"
+      },
+      {
+        "steg": 2,
+        "agent": "research-agent",
+        "status": "klar",
+        "leverans": "brief_metadata.json uppdaterad med tjanster, beskrivning, har_recensioner, har_certifieringar, lokal_kontext, externa_kallor",
+        "instruktion": "Hämta från https://bellums.se/: tjänstelista, företagsbeskrivning, tonalitet, referensjobb, certifieringar/F-skatt, recensioner/omdömen. Hämta lokal kontext per ort (Danderyd, Östermalm, Sollentuna, Stockholm): närområden, landmärken, bostadstyper. Föreslå 2–4 godkända externa källkandidater per sida. Fyll i missing_fields i brief_metadata.json.",
+        "behover_research_falt": ["tjanster", "beskrivning", "har_recensioner", "har_certifieringar"]
+      },
+      {
+        "steg": 3,
+        "agent": "template-agent",
+        "status": "vantar",
+        "instruktion": "Konvertera Elever Construction HTML-mall till Astro-komponenter. Startsida: elever-html/index.html. Välj tjänstedetaljsida (service-single*/services-single-*) som layout för SEO-sidor — rapportera vald fil. Använd FAQ-komponent från mallen på SEO-sidor. Rensa oanvända mallsidor. Granska bilder i assets/images/nya-bilder/ och rapportera: logga, hero-kandidat, orientering, upplösning, dubbletter, inbrända texter, föreslagna filnamn. Flytta till src/assets/images/kund/. Tillämpa typsnitt, färger och prestandakrav från technical_requirements."
+      },
+      {
+        "steg": 4,
+        "agent": "karnsides-agent",
+        "status": "vantar",
+        "instruktion": "Bygg startsida, om-oss och kontakt. Tilltal: vi-form. Inkludera öppettider i sidfot/kontakt och som openingHours i LocalBusiness-schema. Kontaktformulär med fält från formularfalt_standard + formularfalt_bransch. Ta bort teamsektioner per fast undantag i content-kontraktet."
+      },
+      {
+        "steg": 5,
+        "agent": "lokal-seo-agent",
+        "status": "vantar",
+        "instruktion": "Bygg 8 lokala SEO-sidor enligt local_seo_pages. Unikt innehåll per sida — inga copy-paste-orter. Östermalm är stadsdel i Stockholm: ange inte kontor där om det inte bekräftas. Följ content-kontrakt: E-E-A-T, intern länkning, externa källor, unika FAQ (3–5 per sida), duplicate-content-variation, sökordsanvändning. Produktionschecklista (6 punkter) ska vara uppfylld per sida innan vidare."
+      },
+      {
+        "steg": 6,
+        "agent": "lank-agent",
+        "status": "vantar",
+        "instruktion": "Crawla hela sajtens länkgraf. Flagga: orphan-sidor (< 2–3 inkommande), sidor med < 2 utgående kontextuella länkar, döda länkar. Verifiera att startsidan länkar till alla 8 SEO-sidor."
+      },
+      {
+        "steg": 7,
+        "agent": "qa-agent",
+        "status": "vantar",
+        "instruktion": "Kör Lighthouse mobil (mål: 90+, LCP < 2,5 s, CLS < 0,1, TBT < 200 ms). Kör textlikhetskontroll (cosine similarity) på alla lokalsidors brödtext parvis, tröskeln ~40–50% = flagga. Kontrollera FAQ-block separat. Validera JSON-LD schema. Kontrollera WCAG AA-kontrast för #C98A3D. Verifiera inga preloaders, ingen jQuery, inga ikon-typsnitt, inga externa Google Fonts-anrop."
+      },
+      {
+        "steg": 8,
+        "agent": "deploy-agent",
+        "status": "vantar",
+        "instruktion": "Astro statisk build → Vercel. Sätt Cache-Control i vercel.json: 1 år immutable för /_astro/* och /fonts/*. Verifiera att /api/contact API-routen fungerar med Resend (kräver att användaren har angivit Resend API-nyckel)."
+      }
+    ],
+    "exkluderade_agenter": ["guide-agent"],
+    "exkluderingsorsak": "Ingen blogg eller guider i detta projekt (se sidor_i_omfang)"
+  }
+}

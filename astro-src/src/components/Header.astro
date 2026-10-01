@@ -1,0 +1,173 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/', label: 'Hem' },
+  { href: '/om-oss', label: 'Om oss' },
+  { href: '/kontakt', label: 'Kontakt' },
+];
+
+const tjanstDropdown = [
+  { href: '/golvslippning-stockholm', label: 'Golvslippning Stockholm' },
+  { href: '/golvslippning-danderyd', label: 'Golvslippning Danderyd' },
+  { href: '/golvslippning-ostermalm', label: 'Golvslippning Östermalm' },
+  { href: '/golvslippning-sollentuna', label: 'Golvslippning Sollentuna' },
+  { href: '/hantverkare-stockholm', label: 'Hantverkare Stockholm' },
+  { href: '/hantverkare-danderyd', label: 'Hantverkare Danderyd' },
+  { href: '/hantverkare-ostermalm', label: 'Hantverkare Östermalm' },
+  { href: '/hantverkare-sollentuna', label: 'Hantverkare Sollentuna' },
+];
+---
+
+<header class="site-header header-sticky" id="site-header">
+  <!-- Top bar -->
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top-inner">
+        <div class="header-top-info">
+          <div class="info-item">
+            <!-- Phone icon -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:+46709122589">070-912 25 89</a>
+          </div>
+          <div class="info-item">
+            <!-- Email icon -->
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:hampus@bellums.se">hampus@bellums.se</a>
+          </div>
+        </div>
+        <div class="header-top-social">
+          <span>Följ oss:</span>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/bellumsgrupp/" rel="noopener noreferrer" target="_blank" aria-label="Bellums på Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@bellumsgrupp" rel="noopener noreferrer" target="_blank" aria-label="Bellums på TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.28 8.28 0 004.84 1.55V6.78a4.85 4.85 0 01-1.07-.09z"/></svg>
+          </a>
+          <!-- Pinterest -->
+          <a href="https://se.pinterest.com/Bellumsbolag/" rel="noopener noreferrer" target="_blank" aria-label="Bellums på Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <div class="header-main" id="header-main">
+    <div class="container">
+      <div class="header-main-inner">
+        <a href="/" class="header-logo" aria-label="Bellums – startsida">
+          <img
+            src="/images/kund/bellums-logotyp.webp"
+            alt="Bellums – Golvslippning och hantverk i Stockholm"
+            width="160"
+            height="60"
+            loading="eager"
+          />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav aria-label="Huvudnavigering">
+          <ul class="main-nav">
+            {navLinks.map(link => (
+              <li class={currentPath === link.href ? 'active' : ''}>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+            <li class="has-dropdown">
+              <a href="#" aria-haspopup="true" aria-expanded="false">Tjänster</a>
+              <ul class="dropdown" role="menu">
+                {tjanstDropdown.map(item => (
+                  <li role="menuitem">
+                    <a href={item.href}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-cta-btn">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+        </div>
+
+        <!-- Hamburger (mobil) -->
+        <button
+          class="hamburger"
+          id="hamburger-btn"
+          aria-label="Öppna meny"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobilmeny -->
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobilnavigering" hidden>
+      {navLinks.map(link => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+      <button
+        id="mobile-tjanster-toggle"
+        class="mobile-menu"
+        style="background:var(--color-grey-light);border:none;cursor:pointer;display:block;width:100%;text-align:left;padding:0.75rem 1.5rem;font-family:var(--font-button);font-size:0.9rem;border-bottom:1px solid var(--color-grey-mid);"
+        aria-expanded="false"
+      >
+        Tjänster ▾
+      </button>
+      <div id="mobile-tjanster-sub" class="mobile-sub" hidden>
+        {tjanstDropdown.map(item => (
+          <a href={item.href} class="mobile-sub">{item.label}</a>
+        ))}
+      </div>
+      <a href="/kontakt" style="background:var(--color-accent);color:var(--color-black);font-family:var(--font-button);font-weight:500;">Begär offert</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Sticky header
+  const header = document.getElementById('site-header');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('is-sticky');
+      } else {
+        header.classList.remove('is-sticky');
+      }
+    }, { passive: true });
+  }
+
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = !mobileMenu.hidden;
+      mobileMenu.hidden = isOpen;
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+      hamburger.classList.toggle('open', !isOpen);
+    });
+  }
+
+  // Mobile Tjänster submenu toggle
+  const tjansterToggle = document.getElementById('mobile-tjanster-toggle');
+  const tjansterSub = document.getElementById('mobile-tjanster-sub');
+
+  if (tjansterToggle && tjansterSub) {
+    tjansterToggle.addEventListener('click', () => {
+      const isOpen = !tjansterSub.hidden;
+      tjansterSub.hidden = isOpen;
+      tjansterToggle.setAttribute('aria-expanded', String(!isOpen));
+      tjansterToggle.textContent = isOpen ? 'Tjänster ▾' : 'Tjänster ▴';
+    });
+  }
+</script>

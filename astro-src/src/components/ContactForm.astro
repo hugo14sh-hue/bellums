@@ -1,0 +1,195 @@
+---
+// ContactForm.astro
+// Progressiv enhancement: fungerar utan JS via action="/api/contact"
+// Med JS: AJAX-submit med feedback
+---
+
+<form
+  id="contact-form"
+  action="/api/contact"
+  method="POST"
+  class="contact-form"
+  novalidate
+>
+  <h3>Begär offert</h3>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="namn">Namn <span class="required" aria-hidden="true">*</span></label>
+      <input
+        type="text"
+        id="namn"
+        name="namn"
+        placeholder="Ditt namn"
+        required
+        autocomplete="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="telefon">Telefon <span class="required" aria-hidden="true">*</span></label>
+      <input
+        type="tel"
+        id="telefon"
+        name="telefon"
+        placeholder="07X-XXX XX XX"
+        required
+        autocomplete="tel"
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="epost">E-post <span class="required" aria-hidden="true">*</span></label>
+      <input
+        type="email"
+        id="epost"
+        name="epost"
+        placeholder="din@epost.se"
+        required
+        autocomplete="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="ort">Ort <span class="required" aria-hidden="true">*</span></label>
+      <input
+        type="text"
+        id="ort"
+        name="ort"
+        placeholder="T.ex. Stockholm, Danderyd"
+        required
+        autocomplete="address-level2"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="tjanst">Typ av tjänst <span class="required" aria-hidden="true">*</span></label>
+    <select id="tjanst" name="tjanst" required>
+      <option value="">Välj tjänst...</option>
+      <option value="Golvslippning">Golvslippning</option>
+      <option value="Lackering av trägolv">Lackering av trägolv</option>
+      <option value="Oljebehandling av trägolv">Oljebehandling av trägolv</option>
+      <option value="Hårdvaxoljebehandling">Hårdvaxoljebehandling</option>
+      <option value="Böjning och slipning av parkett">Böjning och slipning av parkett</option>
+      <option value="Golvläggning">Golvläggning</option>
+      <option value="Renovering av trägolv">Renovering av trägolv</option>
+      <option value="Hantverk och renovering">Hantverk och renovering</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="golvyta">Golvyta (ca m²)</label>
+      <input
+        type="number"
+        id="golvyta"
+        name="golvyta"
+        placeholder="Ca antal m²"
+        min="1"
+        max="9999"
+      />
+    </div>
+    <div class="form-group">
+      <label for="golvtyp">Typ av golv</label>
+      <select id="golvtyp" name="golvtyp">
+        <option value="">Välj golvtyp...</option>
+        <option value="Parkettgolv">Parkettgolv</option>
+        <option value="Plankgolv">Plankgolv</option>
+        <option value="Fiskbensmönster">Fiskbensmönster</option>
+        <option value="Annat trägolv">Annat trägolv</option>
+        <option value="Vet ej">Vet ej</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fastighetstyp">Typ av fastighet</label>
+      <select id="fastighetstyp" name="fastighetstyp">
+        <option value="">Välj fastighetstyp...</option>
+        <option value="Villa/radhus">Villa/radhus</option>
+        <option value="Bostadsrätt/lägenhet">Bostadsrätt/lägenhet</option>
+        <option value="Kommersiell lokal">Kommersiell lokal</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="startdatum">Önskat startdatum</label>
+      <input
+        type="date"
+        id="startdatum"
+        name="startdatum"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="meddelande">Meddelande <span class="required" aria-hidden="true">*</span></label>
+    <textarea
+      id="meddelande"
+      name="meddelande"
+      placeholder="Beskriv gärna vad du vill ha hjälp med, existerande skick på golvet, och eventuella frågor..."
+      required
+    ></textarea>
+  </div>
+
+  <div class="form-submit">
+    <button type="submit" class="btn btn-primary" id="form-submit-btn">
+      Skicka förfrågan
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+
+  <div id="form-success" class="form-message success" role="alert" aria-live="polite"></div>
+  <div id="form-error" class="form-message error" role="alert" aria-live="polite"></div>
+</form>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const submitBtn = document.getElementById('form-submit-btn') as HTMLButtonElement | null;
+  const successMsg = document.getElementById('form-success') as HTMLElement | null;
+  const errorMsg = document.getElementById('form-error') as HTMLElement | null;
+
+  if (form && submitBtn && successMsg && errorMsg) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Reset messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      successMsg.className = 'form-message success';
+      errorMsg.className = 'form-message error';
+
+      // Disable button during submission
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Skickar...';
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (response.ok) {
+          successMsg.textContent = 'Tack! Vi återkommer inom 24 timmar.';
+          successMsg.style.display = 'block';
+          form.reset();
+          submitBtn.textContent = 'Skickat!';
+        } else {
+          const data = await response.json().catch(() => ({}));
+          const msg = (data as { error?: string }).error || 'Något gick fel. Försök igen eller ring oss på 070-912 25 89.';
+          errorMsg.textContent = msg;
+          errorMsg.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Skicka förfrågan';
+        }
+      } catch {
+        errorMsg.textContent = 'Nätverksfel. Kontrollera din uppkoppling och försök igen.';
+        errorMsg.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Skicka förfrågan';
+      }
+    });
+  }
+</script>

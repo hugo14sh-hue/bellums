@@ -1,0 +1,248 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Hantverkare Sollentuna",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bellums Volym Två AB",
+    "telephone": "+46709122589",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Solna",
+      "addressCountry": "SE"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Sollentuna"
+  }
+};
+---
+
+<PageLayout
+  title="Hantverkare Sollentuna – Bellums Volym Två AB"
+  description="Hantverkare i Sollentuna för renovering, snickeri och golvarbeten – Norrviken, Silverdal, Tureberg och hela kommunen. Offert inom 24 h, 2 års garanti, F-skatt godkänd."
+  jsonLd={jsonLd}
+>
+
+  <!-- ===== BREADCRUMB-HERO ===== -->
+  <section class="breadcrumb-hero" aria-label="Hantverkare i Sollentuna">
+    <img
+      class="breadcrumb-hero__bg"
+      src="/images/kund/bellums-altanbygge-tradgard.webp"
+      alt="Bellums hantverkare bygger altan i Sollentuna"
+      width="1200"
+      height="800"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="breadcrumb-hero__content">
+        <nav aria-label="Brödsmulor" class="breadcrumb-nav">
+          <ol>
+            <li><a href="/">Hem</a></li>
+            <li aria-hidden="true">›</li>
+            <li aria-current="page">Hantverkare Sollentuna</li>
+          </ol>
+        </nav>
+        <h1>Hantverkare i Sollentuna</h1>
+        <p>Vi utför renovering, snickeri, golvarbeten och utomhusprojekt i Sollentunas villaområden och bostadsrätter – från Norrviken och Edsviken till Silverdal och Tureberg.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO-TEXT ===== -->
+  <section class="section-gap" aria-labelledby="intro-heading-hs2">
+    <div class="container">
+      <div class="page-intro">
+        <div class="page-intro__text">
+          <span class="label">Sollentuna – blandat och levande</span>
+          <h2 id="intro-heading-hs2">Hantverk för en kommun i förändring</h2>
+          <p>Sollentuna är en kommun som bygger och renoverar i snabb takt. I Silverdal och kring Häggvik uppförs nya parhus och radhus, medan de äldre villorna i Norrviken och längs Edsviken innehåller kök och golv som haft sina bästa dagar och behöver rustas upp. Det är en kombination som passar oss väl – vi är lika bekväma med en köksrenovering i ett 70-talshus som med att montera och bygga om i ett nytt radhus i Silverdal.</p>
+          <p>Vi lämnar alltid skriftliga avtal och offert, och du kan som husägare eller bostadsrättsinnehavare i Sollentuna räkna hem 30 % av vår arbetskostnad via ROT-avdraget. Mer om hur avdraget fungerar finns hos <a href="https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html" rel="noopener noreferrer" target="_blank">Skatteverket</a>. Vi är F-skatt-godkända, lämnar 2 års garanti och har 53 genomförda uppdrag med 4,25 av 5 i kundbetyg på Servicefinder. Inga luftiga löften – vi håller det vi lovar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VAD INGÅR / PROCESS ===== -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-labelledby="process-heading-hs2">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Vad vi gör</span>
+        <h2 id="process-heading-hs2">Hantverksuppdrag vi utför i Sollentuna</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Renovering av kök och badrum</h3>
+            <p>Vi utför köks- och badrumsrenoveringar i Sollentunas blandade bostadsbestånd – från äldre villor i Norrviken med originalinstallationer till nyproduktion i Silverdal som behöver ett upplyft. Vi tar hand om hela projektet.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Golvarbeten och ytbehandling</h3>
+            <p>Slipning och lackering av befintliga trägolv, läggning av nytt golv och ytbehandling med lack eller hårdvaxolja. Vi arbetar i hela Sollentuna och anpassar metod efter vad huset faktiskt innehåller.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Trädäck, altan och utomhusjobb</h3>
+            <p>Sollentuna har gott om tomter och trädgårdar som är mogna för en altan eller pergola. Vi bygger trädäck, altaner och staket – med garanti och rätt material för utomhusmiljö.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-gap faq-section" aria-label="Vanliga frågor om hantverkare i Sollentuna">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">FAQ</span>
+        <h2>Vanliga frågor om hantverk i Sollentuna</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Arbetar ni i hela Sollentuna – inklusive Silverdal och Rotebro?</summary>
+          <div class="faq-answer">
+            <p>Ja, vi tar uppdrag i hela Sollentunas kommun: Norrviken, Edsviken, Silverdal, Tureberg, Edsberg, Häggvik och Rotebro. Vi är baserade i Solna och tar oss enkelt till Sollentuna via E4 eller E18. Inga tilläggsavgifter för resa inom kommunen.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vad kostar en köksrenovering i ett Sollentunahus?</summary>
+          <div class="faq-answer">
+            <p>Det beror på kökets storlek, hur mycket som demonteras och vad som byggs nytt. Vi lämnar alltid en kostnadsfri, skriftlig offert efter att vi sett förutsättningarna på plats. Som husägare kan du använda ROT-avdrag och dra av 30 % av vår arbetskostnad. Läs mer om dina konsumenträttigheter hos <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverket</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Hur lång tid tar en typisk renovering i Sollentuna?</summary>
+          <div class="faq-answer">
+            <p>Det varierar kraftigt. En köksrenovering tar normalt 1–3 veckor beroende på om det är utbyte av köksinredning eller en mer genomgripande ombygnad. Golvslipning i ett typiskt villahus tar 2–4 dagar. Vi sätter alltid upp en realistisk tidsplan i offerten och informerar om eventuella avvikelser.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Kan ni bygga altan eller trädäck i Sollentuna?</summary>
+          <div class="faq-answer">
+            <p>Ja, utomhusarbeten som trädäck och altaner är något vi gärna tar oss an – det är vanligt i Sollentunas villakvarter med stora tomter. Tänk på att vissa åtgärder kan kräva bygglovsanmälan – det är ditt ansvar att kontrollera det med kommunen, men vi kan hjälpa till med att förstå vad som gäller för ditt projekt.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Hur säkerställer jag att hantverket håller kvalitet?</summary>
+          <div class="faq-answer">
+            <p>Vi lämnar alltid skriftlig offert och avtal, och du har 2 års garanti på arbetet vi utför, plus reklamationsrätt i tre år enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/" rel="noopener noreferrer" target="_blank">konsumenttjänstlagen</a>. Vi arbetar med F-skattsedel och håller vad vi lovar – det är den kundrecension vi återkommer till mest. 53 uppdrag med 4,25 av 5 i kundbetyg på Servicefinder.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA-BANNER ===== -->
+  <section class="cta-banner" aria-label="Begär offert">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2>Vad kan vi hjälpa dig med i Sollentuna?</h2>
+        <p>Berätta om ditt projekt och vi återkommer med en kostnadsfri offert inom 24 timmar. F-skatt, 2 års garanti.</p>
+        <div class="cta-banner__btns">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="tel:+46709122589" class="btn btn-dark">Ring 070-912 25 89</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERNA LÄNKBLOCKAR ===== -->
+  <section class="local-links section-gap" aria-label="Fler tjänster och områden">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Fler områden</span>
+        <h2>Vi hjälper även kunder i</h2>
+      </div>
+      <div class="local-links__grid">
+        <a href="/hantverkare-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare i Stockholm
+        </a>
+        <a href="/hantverkare-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverk i Danderyd
+        </a>
+        <a href="/hantverkare-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare på Östermalm
+        </a>
+        <a href="/golvslippning-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/></svg>
+          Golvslippning i Sollentuna
+        </a>
+        <a href="/om-oss" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          Om oss
+        </a>
+        <a href="/kontakt" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Kontakta oss
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<style>
+.breadcrumb-hero__content p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0; }
+.breadcrumb-nav ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1rem; font-size: 0.875rem; }
+
+.page-intro__text { max-width: 780px; }
+.page-intro__text h2 { margin-top: 0.5rem; }
+
+.process-list { display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin-top: 2rem; }
+.process-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.process-icon { flex-shrink: 0; width: 52px; height: 52px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; }
+.process-item h3 { margin: 0 0 0.5rem; }
+.process-item p { margin: 0; color: var(--color-grey-text); }
+
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px; }
+.faq-item { border: 1px solid var(--color-grey-mid); border-radius: 4px; overflow: hidden; }
+.faq-question { padding: 1.25rem 1.5rem; font-family: var(--font-button); font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after { content: '+'; font-size: 1.5rem; color: var(--color-accent); transition: transform 0.2s; }
+details[open] .faq-question::after { content: '−'; }
+.faq-answer { padding: 0 1.5rem 1.25rem; color: var(--color-grey-text); font-size: 0.9375rem; }
+.faq-answer p { margin: 0; }
+.faq-answer a { color: var(--color-accent); }
+</style>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+</script>

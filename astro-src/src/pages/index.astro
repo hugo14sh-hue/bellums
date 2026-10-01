@@ -1,0 +1,425 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Bellums Volym Två AB",
+  "description": "Golvslippning, lackering och hantverk i Stockholm med omnejd. 2 års garanti. F-skatt godkänd.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Honörsgatan 6",
+    "postalCode": "17069",
+    "addressLocality": "Solna",
+    "addressCountry": "SE"
+  },
+  "telephone": "+46709122589",
+  "email": "hampus@bellums.se",
+  "url": "https://bellums.se/",
+  "openingHours": ["Mo-Fr 06:00-19:00", "Sa 09:00-16:00"],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/bellumsgrupp/",
+    "https://www.tiktok.com/@bellumsgrupp",
+    "https://se.pinterest.com/Bellumsbolag/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.25",
+    "reviewCount": "53",
+    "bestRating": "5"
+  }
+};
+---
+
+<PageLayout
+  title="Golvslippning Stockholm – Bellums Volym Två AB"
+  description="Vi slipar och lackerar trägolv, lägger nytt golv och renoverar hem i Stockholm, Danderyd, Östermalm och Sollentuna. Kostnadsfri offert. 2 års garanti. F-skatt."
+  jsonLd={jsonLd}
+>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Introduktion">
+    <img
+      src="/images/kund/bellums-team-renovering-lagenhet.webp"
+      alt="Bellums hantverkare arbetar i lägenhet i Stockholm"
+      class="hero__bg"
+      width="1260"
+      height="945"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="hero__content">
+        <span class="hero__label">Golvslippning &amp; Hantverk</span>
+        <h1>Golvslippning och hantverk i Stockholm</h1>
+        <p>Vi slipar och lackerar trägolv, lägger nytt golv och renoverar hem i Stockholmsregionen. Kostnadsfri offert – svar inom 24 timmar.</p>
+        <div class="hero__ctas">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="/om-oss" class="btn btn-secondary">Läs om oss</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST-BAR ===== -->
+  <div class="trust-bar" aria-label="Kvalitetssignaler">
+    <div class="container">
+      <div class="trust-bar__inner">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span>2 års garanti</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <span>F-skatt godkänd</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <span>4,25/5 i kundbetyg (53 uppdrag)</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          <span>Svar inom 24 timmar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FUN FACTS / RÄKNARE ===== -->
+  <section class="fun-facts section-gap" aria-label="Statistik">
+    <div class="container">
+      <div class="fun-facts__grid">
+        <div class="fact-card fade-in">
+          <span class="counter" data-target="53">0</span>
+          <span class="label">Slutförda uppdrag</span>
+        </div>
+        <div class="fact-card fade-in">
+          <span class="counter" data-target="4" data-suffix=",25/5">4,25/5</span>
+          <span class="label">Kundbetyg på Servicefinder</span>
+        </div>
+        <div class="fact-card fade-in">
+          <span class="counter" data-target="2" data-suffix=" år">2 år</span>
+          <span class="label">Garanti på utfört arbete</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OM OSS BLOCK ===== -->
+  <section class="section-gap" aria-label="Om Bellums">
+    <div class="container">
+      <div class="about-block">
+        <div class="about-block__image fade-in">
+          <img
+            src="/images/kund/bellums-golvlaggning-lagenhet.webp"
+            alt="Bellums hantverkare lägger golv i lägenhet"
+            width="600"
+            height="480"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="about-block__content fade-in">
+          <span class="label">Om oss</span>
+          <h2>Hantverkare med hjärtat i Stockholm</h2>
+          <p>Vi på Bellums Volym Två AB hjälper privatpersoner och företag i Stockholmsregionen med golvslippning, lackering och hantverk. Från offert till färdigt golv är kommunikation och kvalitet det vi värnar om mest.</p>
+          <p>Vi lämnar 2 års garanti på allt utfört arbete och arbetar alltid med godkänd F-skattsedel. Du når oss snabbt – svar på offertförfrågningar inom 24 timmar.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>53+ slutförda uppdrag med 4,25/5 i kundbetyg</span>
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>2 års garanti på utfört arbete</span>
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>F-skatt godkänd – trygg anlitning</span>
+            </div>
+          </div>
+          <a href="/om-oss" class="btn btn-primary">Läs mer om oss</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TJÄNSTER ===== -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-label="Tjänster">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Vad vi gör</span>
+        <h2>Våra tjänster</h2>
+        <p>Vi utför golvarbeten och hantverksuppdrag i hela Stockholmsregionen – alltid med garanti och god kommunikation.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/></svg>
+          </div>
+          <h3>Golvslippning</h3>
+          <p>Vi slipar och återställer trägolv i villor, bostadsrätter och lokaler. Professionell utrustning och dammfri slipning.</p>
+          <a href="/golvslippning-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.42 9.61C20.12 7.9 21 5.97 21 4h-2c0 1.37-.74 2.9-2.09 4.25l-1.07 1.07 1.42 1.42 1.16-1.13zM13 4c0-2.21-1.79-4-4-4S5 1.79 5 4c0 2.06 1.56 3.75 3.5 3.97V18H7v2h2v2h2v-2h2v-2h-1.5V7.97C13.44 7.75 13 5.94 13 4z"/></svg>
+          </div>
+          <h3>Lackering av trägolv</h3>
+          <p>Vattenbaserad eller oljebaserad lack – vi väljer rätt produkt för ditt golv och önskad finish.</p>
+          <a href="/golvslippning-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          </div>
+          <h3>Oljebehandling</h3>
+          <p>Oljebehandling och hårdvaxolja ger ett naturligt utseende och ett hållbart skydd som är enkelt att underhålla.</p>
+          <a href="/golvslippning-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          </div>
+          <h3>Golvläggning</h3>
+          <p>Vi lägger nytt trägolv, parkett och laminat i hela Stockholmsregionen. Professionell montering med garanti.</p>
+          <a href="/golvslippning-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          </div>
+          <h3>Hantverk &amp; renovering</h3>
+          <p>Snickeri, renovering och hantverksarbeten av alla slag – vi hjälper till med både stora och små projekt.</p>
+          <a href="/hantverkare-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          </div>
+          <h3>Böjning &amp; slipning av parkett</h3>
+          <p>Vi restaurerar fiskbensgolv, parkettgolv och gamla trägolv till nyskick med rätt teknik och omsorg.</p>
+          <a href="/golvslippning-stockholm" class="link">Läs mer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENSPROJEKT ===== -->
+  <section class="section-gap" aria-label="Referensprojekt">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Vårt arbete</span>
+        <h2>Referensprojekt</h2>
+        <p>Exempel på jobb vi genomfört i Stockholmsregionen.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card fade-in">
+          <img
+            src="/images/kund/bellums-nylagt-laminatgolv-gratt-resultat.webp"
+            alt="Nylagt grått laminatgolv – färdigt resultat"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="portfolio-card__caption">
+            <h4>Nytt laminatgolv</h4>
+            <span>Golvläggning · Stockholm</span>
+          </div>
+        </div>
+        <div class="portfolio-card fade-in">
+          <img
+            src="/images/kund/bellums-fardigt-kok-morkgra-marmor-resultat.webp"
+            alt="Färdigt kök med mörkgrå luckor och marmorlik stänkskydd"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="portfolio-card__caption">
+            <h4>Köksrenovering</h4>
+            <span>Hantverk &amp; renovering · Solna</span>
+          </div>
+        </div>
+        <div class="portfolio-card fade-in">
+          <img
+            src="/images/kund/bellums-fardigt-tradack-pergola-resultat.webp"
+            alt="Färdigt trädäck med pergola – resultatbild"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="portfolio-card__caption">
+            <h4>Trädäck med pergola</h4>
+            <span>Utomhushantverk · Stockholm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECENSIONER ===== -->
+  <section class="reviews-section section-gap" aria-label="Kundomdömen">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Vad kunderna säger</span>
+        <h2>Omdömen</h2>
+      </div>
+      <div class="reviews-summary">
+        <div class="reviews-badge">
+          <span class="score">4,25</span>
+          <div>
+            <div class="review-stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <span class="score-label">av 5 · 53 slutförda uppdrag på Servicefinder</span>
+          </div>
+        </div>
+        <p><a href="https://servicefinder.se/foretag/6697277" rel="noopener noreferrer" target="_blank" style="color:var(--color-accent);">Se alla omdömen på Servicefinder →</a></p>
+      </div>
+      <div class="reviews-scroll">
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <blockquote>"Bra bemötande och håller vad de lovar. Kommunikationen under hela projektet fungerade utmärkt."</blockquote>
+          <p class="reviewer">Kund · Servicefinder</p>
+          <p class="source">Verifierat omdöme</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <blockquote>"Rimlig prissättning och professionellt genomförande. Korrekt bemötande från offert till färdigt jobb."</blockquote>
+          <p class="reviewer">Kund · Servicefinder</p>
+          <p class="source">Verifierat omdöme</p>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <blockquote>"Lätt att nå, snabbt svar på offert och jobbet blev precis som vi tänkt oss. Rekommenderas."</blockquote>
+          <p class="reviewer">Kund · Servicefinder</p>
+          <p class="source">Verifierat omdöme</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOKALA SEO-SIDOR ===== -->
+  <section class="local-links section-gap" aria-label="Vi arbetar i hela Stockholmsregionen">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Verksamma i</span>
+        <h2>Golvslippning och hantverk nära dig</h2>
+        <p>Vi utför golvarbeten och hantverksuppdrag i Stockholm med omnejd – inklusive Danderyd, Östermalm och Sollentuna.</p>
+      </div>
+      <div class="local-links__grid">
+        <a href="/golvslippning-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Stockholm
+        </a>
+        <a href="/golvslippning-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Danderyd
+        </a>
+        <a href="/golvslippning-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Östermalm
+        </a>
+        <a href="/golvslippning-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Sollentuna
+        </a>
+        <a href="/hantverkare-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare Stockholm
+        </a>
+        <a href="/hantverkare-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare Danderyd
+        </a>
+        <a href="/hantverkare-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare Östermalm
+        </a>
+        <a href="/hantverkare-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare Sollentuna
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner" aria-label="Kontakta oss">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2>Redo att renovera? Kontakta oss idag.</h2>
+        <p>Vi återkommer med offert inom 24 timmar. Kostnadsfritt och utan förpliktelser.</p>
+        <div class="cta-banner__btns">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="tel:+46709122589" class="btn btn-secondary">Ring 070-912 25 89</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<script>
+  // IntersectionObserver för fade-in animationer
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+
+  // Räknare (fun facts)
+  const counters = document.querySelectorAll<HTMLElement>('.counter[data-target]');
+  if (counters.length > 0) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target as HTMLElement;
+          const target = parseInt(el.dataset.target ?? '0', 10);
+          const suffix = el.dataset.suffix ?? '+';
+          let current = 0;
+          const step = Math.ceil(target / 40);
+          const timer = setInterval(() => {
+            current = Math.min(current + step, target);
+            el.textContent = current + suffix;
+            if (current >= target) clearInterval(timer);
+          }, 30);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(el => counterObserver.observe(el));
+  }
+</script>

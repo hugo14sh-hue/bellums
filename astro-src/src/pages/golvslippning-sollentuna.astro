@@ -1,0 +1,248 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Golvslippning Sollentuna",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bellums Volym Två AB",
+    "telephone": "+46709122589",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Solna",
+      "addressCountry": "SE"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Sollentuna"
+  }
+};
+---
+
+<PageLayout
+  title="Golvslippning Sollentuna – Bellums Volym Två AB"
+  description="Vi slipar och ytbehandlar trägolv i Sollentunas villaområden och bostadsrätter – Norrviken, Edsviken, Silverdal och hela kommunen. Offert inom 24 h. 2 års garanti."
+  jsonLd={jsonLd}
+>
+
+  <!-- ===== BREADCRUMB-HERO ===== -->
+  <section class="breadcrumb-hero" aria-label="Golvslippning i Sollentuna">
+    <img
+      class="breadcrumb-hero__bg"
+      src="/images/kund/bellums-golvlaggning-lagenhet.webp"
+      alt="Hantverkare slipar trägolv i Sollentuna"
+      width="1200"
+      height="800"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="breadcrumb-hero__content">
+        <nav aria-label="Brödsmulor" class="breadcrumb-nav">
+          <ol>
+            <li><a href="/">Hem</a></li>
+            <li aria-hidden="true">›</li>
+            <li aria-current="page">Golvslippning Sollentuna</li>
+          </ol>
+        </nav>
+        <h1>Golvslippning i Sollentuna</h1>
+        <p>Vi renoverar trägolv i Sollentunas blandade bostadsbestånd – från äldre villor vid Edsviken till nya bostadsrätter i Silverdal och Tureberg.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO-TEXT ===== -->
+  <section class="section-gap" aria-labelledby="intro-heading-s">
+    <div class="container">
+      <div class="page-intro">
+        <div class="page-intro__text">
+          <span class="label">Sollentuna – ett brett bostadsbestånd</span>
+          <h2 id="intro-heading-s">Trägolvs­renovering i en kommun med blandat bestånd</h2>
+          <p>Sollentuna nordväst om Stockholm är en kommun med ovanligt stor variation i bostadstyper. I Norrviken och längs Edsviken finns traditionella villor med äldre träpanelgolv och massivt plankgolv – material som håller länge om det sköts om med jämna mellankrums slipning och ytbehandling. Parallellt byggs det i Silverdal och kring Häggvik, där nyare bostadsrätter och radhus har kunder som vill hålla sina golv i toppskick längre. Vi arbetar med trägolvs­renovering i hela Sollentuna och anpassar metod och ytbehandling efter det aktuella golvets typ och ålder.</p>
+          <p>Att slipa ett befintligt golv är nästan alltid klokare än att byta det – för plånboken, för miljön och för kvalitetens skull. Som villa- eller bostadsrättsinnehavare i Sollentuna kan du använda ROT-avdraget och dra 30 procent av arbetskostnaden, vilket gör att beräkna kostnad mot nyttjat värde är enkelt. Mer om hur ROT fungerar hittar du hos <a href="https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html" rel="noopener noreferrer" target="_blank">Skatteverket</a>. Vi är F-skatt-godkända, lämnar 2 års garanti och svarar på förfrågningar inom 24 timmar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VAD INGÅR / PROCESS ===== -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-labelledby="process-heading-s">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Hur vi arbetar</span>
+        <h2 id="process-heading-s">Vad ingår i en golvslipning</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Bedömning av golv och material</h3>
+            <p>Vi bedömer träslag, slipdjup och golvets skick innan vi väljer metod. Kombinationsprojekt är vanliga i Sollentuna – exempelvis villa med originalträgolv i vardagsrum men nytt laminat i hall. Vi arbetar med vad du faktiskt har.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Slipning och spackling</h3>
+            <p>Vi slipar med professionell utrustning och tätar sprickor och fogar med matchande spackel. Målet är ett jämnt underlag utan synliga repor eller ojämnheter.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Ytbehandling och slutbesiktning</h3>
+            <p>Lack, hårdvaxolja eller olja – vi lägger det du väljer och visar resultatet innan vi lämnar. Du får 2 års garanti på arbetet och vi säkerställer att du är nöjd.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-gap faq-section" aria-label="Vanliga frågor om golvslippning i Sollentuna">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">FAQ</span>
+        <h2>Vanliga frågor om golvslippning i Sollentuna</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Hur bokar jag en golvslipning i Sollentuna?</summary>
+          <div class="faq-answer">
+            <p>Det enklaste är att skicka en förfrågan via vårt kontaktformulär eller ringa oss direkt på 070-912 25 89. Berätta gärna om din golvyta, vilket träslag du har och i vilket område i Sollentuna du bor – det gör det enklare för oss att ge en snabb uppskattning. Vi svarar alltid inom 24 timmar.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Arbetar ni i hela Sollentuna – inklusive Norrviken och Silverdal?</summary>
+          <div class="faq-answer">
+            <p>Vi arbetar i hela kommunen: Norrviken, Edsviken, Silverdal, Tureberg, Edsberg, Häggvik och övriga Sollentuna. Goda kommunikationer via E4 och pendeltågen gör att vi kan ta uppdrag i Sollentuna utan tilläggskostnader för resa. Vi är baserade i Solna strax söder om er.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vad kostar det att slipa ett golv i en Sollentuna-villa?</summary>
+          <div class="faq-answer">
+            <p>Priset beror på golvyta, skick och önskad ytbehandling. Som villaägare i Sollentuna kan du använda ROT-avdrag och dra 30 % av vår arbetskostnad. Kontakta oss för en kostnadsfri och bindande offert – vi lämnar alltid ett skriftligt prisförslag. Vi hjälper dig även med ROT-administrationen så att avdraget sker smidigt. Läs mer om dina rättigheter som konsument hos <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverket</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vi har en nyare bostadsrätt i Silverdal med fabriksbehandlat trägolv – kan det slipas?</summary>
+          <div class="faq-answer">
+            <p>Ja, men det beror på golvtyp. Massiva trägolv och tjocka parkettgolv med tillräckligt sliplager går utmärkt att slipa om. Tynna trägolv på HDF-kärna (engelskplanks-typ) bör inte slipas – vi bedömer detta vid besiktningen och berättar ärligt om alternativ. Ibland räcker en putsning och ny ytbehandling snarare än fullslipning.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vilken ytbehandling passar bäst för ett aktivt familjehushåll i Sollentuna?</summary>
+          <div class="faq-answer">
+            <p>Hårdvaxolja är ett populärt val i familjehem – det ger ett naturligt utseende, är enkelt att laga lokalt om det uppstår skador och klarar den belastning som barn och sällskapsdjur innebär. Lack ger ett hårdare skydd men kräver fullslipning vid skador. Vi diskuterar för- och nackdelar på plats utifrån ditt specifika golv.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA-BANNER ===== -->
+  <section class="cta-banner" aria-label="Begär offert">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2>Golvet slitet? Vi fixar det – med garanti.</h2>
+        <p>Kontakta oss och berätta om ditt golv i Sollentuna. Kostnadsfri offert och svar inom 24 timmar. F-skatt godkänd.</p>
+        <div class="cta-banner__btns">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="tel:+46709122589" class="btn btn-dark">Ring 070-912 25 89</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERNA LÄNKBLOCKAR ===== -->
+  <section class="local-links section-gap" aria-label="Fler områden vi arbetar i">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Fler områden</span>
+        <h2>Vi arbetar i hela regionen</h2>
+      </div>
+      <div class="local-links__grid">
+        <a href="/golvslippning-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning i Stockholm
+        </a>
+        <a href="/golvslippning-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Trägolvs­renovering i Danderyd
+        </a>
+        <a href="/golvslippning-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Parkett­slipning på Östermalm
+        </a>
+        <a href="/hantverkare-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          Hantverkare i Sollentuna
+        </a>
+        <a href="/om-oss" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          Om Bellums Volym Två AB
+        </a>
+        <a href="/kontakt" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Kontakta oss
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<style>
+.breadcrumb-hero__content p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0; }
+.breadcrumb-nav ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1rem; font-size: 0.875rem; }
+
+.page-intro__text { max-width: 780px; }
+.page-intro__text h2 { margin-top: 0.5rem; }
+
+.process-list { display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin-top: 2rem; }
+.process-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.process-icon { flex-shrink: 0; width: 52px; height: 52px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; }
+.process-item h3 { margin: 0 0 0.5rem; }
+.process-item p { margin: 0; color: var(--color-grey-text); }
+
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px; }
+.faq-item { border: 1px solid var(--color-grey-mid); border-radius: 4px; overflow: hidden; }
+.faq-question { padding: 1.25rem 1.5rem; font-family: var(--font-button); font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after { content: '+'; font-size: 1.5rem; color: var(--color-accent); transition: transform 0.2s; }
+details[open] .faq-question::after { content: '−'; }
+.faq-answer { padding: 0 1.5rem 1.25rem; color: var(--color-grey-text); font-size: 0.9375rem; }
+.faq-answer p { margin: 0; }
+.faq-answer a { color: var(--color-accent); }
+</style>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+</script>

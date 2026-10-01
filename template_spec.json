@@ -1,0 +1,574 @@
+{
+  "stack": "static-html",
+  "sidmall_plats": "Ny sida skapas genom att kopiera befintlig HTML-fil i projektroten. I Astro-projektet ersätts varje HTML-fil av en .astro-fil under src/pages/. Återanvändbara delar (header, footer, nav) bryts ut som Astro-komponenter under src/components/.",
+
+  "vald_variant": {
+    "startsida": {
+      "fil": "index.html",
+      "vald_av": "template-agent",
+      "datum": "2026-10-01",
+      "kommentar": "Enda startsida som används i projektet (index-two.html t.o.m. index-eight.html är alternativa demos som inte används)."
+    },
+    "seo_sida": {
+      "fil": "service-single.html",
+      "vald_av": "template-agent",
+      "datum": "2026-10-01",
+      "kommentar": "Alla fem varianter (service-single, -two, -three, -four, -five) är identiska i sin HTML-struktur. Enda skillnaden är breadcrumb-rubrikens text och breadcrumb-klassen (en saknar 'offers', de andra har det). service-single.html valdes som bas."
+    },
+    "om_oss": {
+      "fil": "about.html",
+      "vald_av": "ej granskad",
+      "kommentar": "Ej analyserad i detta steg – ska hanteras av nästa agent."
+    },
+    "kontakt": {
+      "fil": "contact.html",
+      "vald_av": "template-agent",
+      "datum": "2026-10-01"
+    }
+  },
+
+  "startsida_sektioner": [
+    "header – dubbel header: statisk + sticky (.header--sticky), logotyp SVG, top-bar med telefon/e-post/sociala ikoner, mega-meny (Home/Service/Pages/Shop/Project/Blog/Contact), mobilmeny (MetisMenu-baserad), sökfält (offcanvas), 'Get a Quote'-knapp",
+    "hero – Swiper-slider med 3 slides, varje slide är fullskärms bakgrundsbild (CSS bg_banner-one), rubrik H1, ingress, CTA-knapp 'Our Services'",
+    "fun-facts – 3 räknare med odometer (1200+ projekt, 85% återkommande kunder, 20% tillväxt), ikon-SVG:er",
+    "about – tvåkolumns: vänster bild med overlay-räknare (500+ projekt, 48+ utmärkelser), höger text med H2 + 2 stycken + 'Explore More'-knapp",
+    "marquee – scrollande textbanner driven av scroll-JS",
+    "services-slider – Swiper-karusell med 4 tjänstekort (ikon + rubrik + text + 'Explore More'-länk)",
+    "why-choose-us – process/arbetsflöde: vänster bild med video-play-knapp (fancybox-stil), höger 3 steg med ikon + rubrik + text",
+    "portfolio – Swiper-slider med projektbilder + info-overlay (titel, kategori, plats, pris, kund, år, varaktighet)",
+    "team – 3 teammedlemmar: 1 stor + 2 listade, fotografi + namn + titel + sociala ikoner",
+    "testimonials – Swiper-slider med 4 recensioner (citat + kundinfo + 5-stjärnor + betyg)",
+    "cta-banner – halvbild + text 'Ready to Build Your Dream?' + 2 knappar",
+    "blog – 3 bloggkort (bild + datum-tag + rubrik + ingress + 'Read More')",
+    "brand-slider – Swiper med 6 partnerlogotyper (SVG)",
+    "footer – 4 kontaktrutor (telefon/öppettider/e-post/adress), horisontell nav-rad, 3-kolumns footer (logotyp+social, Useful Links, Quick Services) + nyhetsbrevformulär, copyright-rad"
+  ],
+
+  "seo_layout_sektioner": [
+    "header – identisk med startsidan (dubbel sticky header, mega-meny, mobilmeny)",
+    "breadcrumb – bakgrundsbild, H1, navigation (Hem > Tjänstedetaljer)",
+    "service-details – stor hero-bild (full bredd), H4 rubrik, 2 textstycken, Bootstrap-tabbar med 3 flikar (What's Included / No Compromises on Quality / Customized Solutions), varje flik har 3 punkter med ikon + fetstilt term + förklaringstext",
+    "cta-banner (inline) – bakgrundsbild, H3, ingress, 'Make An Appointment'-knapp",
+    "why-choose-us / process – vänster bild med video-play, höger 3 processsteg",
+    "footer – identisk med startsidan"
+  ],
+
+  "seo_layout_motivering": "Alla fem service-single-varianter delar exakt samma HTML-struktur (breadcrumb, tabbar, inline-CTA, process-sektion, footer). Ingen sidebar existerar i någon variant. Inget FAQ-block finns inbyggt – måste läggas till manuellt i Astro-komponenten. service-single.html valdes som bas eftersom den saknar den extra 'offers'-klassen på breadcrumb-sektionen vilket ger störst frihet att styla om. Tabbar-strukturen är användbar för SEO-sidor: flik 1 kan bli 'Vad ingår', flik 2 'Vanliga frågor' och flik 3 'Varför Bellums' – eller accordion kan ersätta tabbarna helt.",
+
+  "tillgangliga_komponenter": {
+    "hero_typer": [
+      "Swiper fullskärms bildslider med 3 slides och textöverlay (index.html)",
+      "Statisk breadcrumb-hero med bakgrundsbild, H1 och brödsmulor (service-single*.html, contact.html, about.html)"
+    ],
+    "tjanstekort": [
+      "Swiper-karusell med ikon + rubrik + text + länk (index.html services-slider)",
+      "Mega-menykort med ikon + rubrik + beskrivning (nav i alla sidor)"
+    ],
+    "om_oss_block": [
+      "Tvåkolumns bild+text med odometer-räknare overlay"
+    ],
+    "process_block": [
+      "3-steg vertikal lista med ikon + nummer + rubrik + text (index.html, service-single*.html)"
+    ],
+    "portfolio": [
+      "Swiper projektslider med bild + metadata-overlay"
+    ],
+    "team": [
+      "Stor + 2 list-variant teamkort med sociala ikoner"
+    ],
+    "testimonials": [
+      "Swiper testimonial-slider med citat + kundinfo + stjärnor"
+    ],
+    "cta_block": [
+      "Halvbild + text + knappar (index.html, liggande)",
+      "Inline bakgrundsbild-CTA med knapp (service-single*.html)"
+    ],
+    "blogg": [
+      "3-kolumns bloggkortsrad med bild, taggar, rubrik, ingress"
+    ],
+    "brand_logos": [
+      "Swiper partnerlogo-karusell"
+    ],
+    "kontaktformular": [
+      "2-kolumns: kontaktinfo vänster + formulär höger (contact.html)"
+    ],
+    "karta": [
+      "Google Maps-integration via custom JS (contact.html)"
+    ],
+    "footer": [
+      "4 kontaktrutor + horisontell nav + 3-kolumns + nyhetsbrev + copyright"
+    ],
+    "tabbar": [
+      "Bootstrap tab-pane med 3 flikar och checklistor (service-single*.html)"
+    ],
+    "marque": [
+      "Scroll-driven horisontell text-banner"
+    ]
+  },
+
+  "komponentstruktur": {
+    "header": "Inline i varje HTML-fil – dubbleras (statisk + sticky klon). I Astro bryts detta ut som <Header /> med sticky-logik i vanilla-JS.",
+    "footer": "Inline i varje HTML-fil. I Astro bryts detta ut som <Footer />.",
+    "navigation": "Mega-meny med dropdowns och mobilversion (MetisMenu). I Astro ersätts MetisMenu med vanilla-JS toggle.",
+    "mobilmeny": "Offcanvas-panel med separat meny-struktur (inte identisk med desktopmenyn – har färre nivåer)."
+  },
+
+  "formular_plats": "contact.html, rad 1389. Formulär-id: contact-form. action='mailer.php' (PHP – ska ersättas med Astro API-route /api/contact med Resend). Fält: name, email (felaktigt placerat som 'number'), subject (felaktigt label 'Email Address'), message. OBS: fältordningen och labels i formuläret är förvirrande i mallen – kontrollera och rätta upp i Astro-implementationen.",
+
+  "mallfiler_att_behalla": [
+    "index.html",
+    "about.html",
+    "contact.html",
+    "service-single.html"
+  ],
+
+  "mallfiler_att_ta_bort": [
+    "index-two.html",
+    "index-four.html",
+    "index-five.html",
+    "index-six.html",
+    "index-seven.html",
+    "index-eight.html",
+    "onepage-two.html",
+    "onepage-three.html",
+    "onepage-four.html",
+    "onepage-six.html",
+    "onepage-seven.html",
+    "onepage-eight.html",
+    "service-single-two.html",
+    "service-single-three.html",
+    "service-single-four.html",
+    "service-single-five.html",
+    "project-card.html",
+    "project-list.html",
+    "project-slider.html",
+    "project-slider-3.html",
+    "project-card-hover.html",
+    "project-slider-hover.html",
+    "project-three-column.html",
+    "project-details.html",
+    "project-details-2.html",
+    "project-details-gallery.html",
+    "project-details-large-image.html",
+    "team.html",
+    "team-details.html",
+    "blog-grid.html",
+    "blog-list.html",
+    "blog-details.html",
+    "shop.html",
+    "checkout.html",
+    "account.html",
+    "single-product.html",
+    "single-product-left.html",
+    "single-produt-right.html",
+    "appoinment.html",
+    "pricing.html",
+    "working-process.html",
+    "working-process-2.html",
+    "company-history.html",
+    "company-story.html",
+    "company-values.html",
+    "sustainability.html",
+    "safety.html",
+    "careers.html",
+    "our-clients.html",
+    "gallery.html",
+    "privacy-policy.html",
+    "terms-of-condition.html",
+    "404.html",
+    "mailer.php",
+    "index-two.html"
+  ],
+
+  "js_att_ta_bort": [
+    "assets/js/plugins/jquery.js – jQuery, ska tas bort helt",
+    "assets/js/vendor/bootstrap.min.js – Bootstrap JS (tabs, collapse) ersätts med vanilla-JS eller details/summary",
+    "assets/js/plugins/odometer.js – räknarplugin, ersätts med IntersectionObserver + vanilla counter",
+    "assets/js/plugins/jquery-appear.js – jQuery-beroende appear-trigger, bort",
+    "assets/js/plugins/metismenu.js – jQuery-beroende mobilmeny, ersätts med vanilla toggle",
+    "assets/js/plugins/swiper.js – Swiper slider, ersätts med CSS scroll-snap eller statisk grid",
+    "assets/js/plugins/aos.js – AOS scroll-animations, ersätts med CSS + IntersectionObserver",
+    "assets/js/plugins/nice-select.js – custom select, bort",
+    "assets/js/plugins/smooth-scroll.js – smooth scroll plugin, ersätts med CSS scroll-behavior: smooth",
+    "assets/js/vendor/waw.js – okänt vendor-skript, bort",
+    "https://maps.googleapis.com/maps/api/js – Google Maps extern, ersätts med statisk iframe-embed",
+    "assets/js/vendor/marker.js – Google Maps marker, bort",
+    "assets/js/vendor/map-content.js – Google Maps content, bort",
+    "assets/js/vendor/info-box.js – Google Maps infobox, bort",
+    "https://html.themewant.com/golfy/assets/js/plugins/magnific-popup.js – extern fancybox/lightbox, bort",
+    "assets/js/plugins/contact.form.js – jQuery AJAX-formulärskickning, ersätts med Astro API-route",
+    "assets/js/main.js – mallens huvudskript, bör granskas; delar ska bevaras (sticky header, mobilmeny toggle, scroll-to-top) men skrivas om i vanilla-JS utan jQuery"
+  ],
+
+  "css_att_ta_bort": [
+    "assets/css/plugins/fontawesome.css – ikonfonter, ersätts med inline-SVG",
+    "assets/css/plugins/aos.css – AOS-animationer, bort",
+    "assets/css/plugins/odometer.css – räknarplugin, bort",
+    "assets/css/plugins/swiper.css – Swiper slider, bort",
+    "assets/css/plugins/metismenu.css – mobilmeny jQuery-plugin, bort",
+    "assets/css/plugins/magnifying-popup.css – lightbox plugin, bort",
+    "assets/css/vendor/bootstrap.min.css – Bootstrap grid/utility, kan ersättas med eget CSS-grid i Astro eller behållas minimalt utan JS-beroenden",
+    "assets/css/style.css – mallens huvudstil, granskas och porteras selektivt till Astro"
+  ],
+
+  "ikonfonter_att_ersatta": [
+    "Font Awesome 6 (fa-light, fa-regular, fa-solid, fa-brands, fa-sharp) – används genomgående i header, footer, nav, service-cards, testimonials, formulär. Ska ersättas med inline-SVG per ikon. Prioritet: telefon, e-post, plats, pil-höger, stjärna, sök, meny/hamburger."
+  ],
+
+  "deploy_hint": {
+    "stack": "Astro (statisk build) + Vercel",
+    "build_kommando": "astro build",
+    "output_mapp": "dist/",
+    "vercel_json_kravs": true,
+    "vercel_json_innehall": {
+      "headers": [
+        {
+          "source": "/_astro/(.*)",
+          "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+        },
+        {
+          "source": "/fonts/(.*)",
+          "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+        }
+      ]
+    },
+    "astro_api_route": "src/pages/api/contact.ts (ersätter mailer.php, använder Resend SDK)",
+    "google_fonts": "Nej – DM Serif Display, Lora och Montserrat ska självhostas som woff2 under public/fonts/ och länkas med @font-face i global CSS"
+  },
+
+  "bildgranskning": {
+    "logotyp": {
+      "fil": "logotyp.webp",
+      "orientering": "liggande",
+      "innehall": "Svart bakgrund, vit text 'BELLUMS' med hexagonlogotyp till vänster. Inga inbrända SEO-texter.",
+      "foreslaget_namn": "bellums-logotyp.webp",
+      "anvandning": "Header logotyp, footer logotyp"
+    },
+
+    "hero_kandidater": [
+      {
+        "fil": "image033ca7d572-3949-4008-baa5-719112d4323e.jpg.webp",
+        "orientering": "liggande",
+        "uppskattad_upplösning": "1260 × 945 px (hög)",
+        "motiv": "Tre hantverkare i Bellums-kläder arbetar i lägenhet under renovering – kök i bakgrunden. Dynamisk, representativ.",
+        "hero_lamplighet": "Bäst kandidat – liggande, hög upplösning, visar team i arbete",
+        "foreslaget_namn": "bellums-team-renovering-lagenhet.webp"
+      },
+      {
+        "fil": "image360fb651b4-a1b3-462a-8a70-0e3bbd4d6dab.jpg.webp",
+        "orientering": "liggande",
+        "uppskattad_upplösning": "1200 × 800 px",
+        "motiv": "Nybyggd altan/trädäck under uppförande, blå himmel, grön trädgård.",
+        "hero_lamplighet": "God kandidat för altan/utemiljö-tjänst eller om-oss-sida",
+        "foreslaget_namn": "bellums-altanbygge-tradgard.webp"
+      },
+      {
+        "fil": "image20a92546c6-25a0-4cea-94f0-89eb8521cc81.jpg.webp",
+        "orientering": "liggande",
+        "uppskattad_upplösning": "1200 × 900 px",
+        "motiv": "Tre hantverkare arbetar vid husvägg med byggnadsställning, solig dag.",
+        "hero_lamplighet": "Alternativ hero för utemiljö/tilläggsisolering",
+        "foreslaget_namn": "bellums-fasadrenovering-utomhus.webp"
+      }
+    ],
+
+    "bilder": [
+      {
+        "fil": "logotyp.webp",
+        "orientering": "liggande",
+        "motiv": "Logotyp – svart bakgrund, vit text",
+        "inbrand_text": "BELLUMS (logotyptext, avsiktlig)",
+        "foreslaget_namn": "bellums-logotyp.webp"
+      },
+      {
+        "fil": "image022f39bcd6-eb40-476d-be37-d71f507e671d.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare i Bellums t-shirt på knä i litet kök, installerar under diskbänk",
+        "inbrand_text": "BELLUMS på ryggen (logotyp på arbetskläder, ej inbränd i bild)",
+        "dublett_av": "image10f08abfb1 (nästan identiskt motiv, samma kök och person)",
+        "foreslaget_namn": "bellums-montage-diskbank-kok-1.webp"
+      },
+      {
+        "fil": "image033ca7d572-3949-4008-baa5-719112d4323e.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Tre Bellums-hantverkare i renoverad lägenhet, kök syns",
+        "inbrand_text": "BELLUMS på kläder",
+        "foreslaget_namn": "bellums-team-renovering-lagenhet.webp"
+      },
+      {
+        "fil": "image048f65f8c4-0487-4540-ba00-0972985239ba.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Nybyggd trätrappa med staket utomhus",
+        "foreslaget_namn": "bellums-byggd-trappa-staket-utomhus.webp"
+      },
+      {
+        "fil": "image0554a83909-90c6-4ebd-9cb1-96b9b017fef4.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare i gul varselväst vid regelverk inomhus (grundarbete)",
+        "foreslaget_namn": "bellums-grundarbete-regelkonstruktion.webp"
+      },
+      {
+        "fil": "image0620564832-3a61-415d-9976-9d61d1ac8033.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare lägger kakel vid diskbänk i kök",
+        "foreslaget_namn": "bellums-kakellaggning-kok.webp"
+      },
+      {
+        "fil": "image07bf937f39-9797-4727-b041-d590fd1510fe.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare sätter tapet med blommigt mönster",
+        "foreslaget_namn": "bellums-tapetsering-blommigt-monster.webp"
+      },
+      {
+        "fil": "image08c0cfc901-7908-43eb-942c-aa7c10bc2535.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Storskalig renovering av lokal/kontorsplan – hantverkare med ställning",
+        "foreslaget_namn": "bellums-renovering-lokal-storskalig.webp"
+      },
+      {
+        "fil": "image09e6ed9d75-df9c-48fc-a7cb-c395f00d2e7f.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Monterat kök med grå luckor och köksö, dagsljus",
+        "foreslaget_namn": "bellums-monterat-kok-gra-luckor-resultatsida.webp"
+      },
+      {
+        "fil": "image10f08abfb1-f126-468e-bacd-bd4c6d366397.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare på knä i kök – nästan identiskt med image02",
+        "dublett_av": "image022f39bcd6",
+        "foreslaget_namn": "bellums-montage-diskbank-kok-2.webp"
+      },
+      {
+        "fil": "image115d877527-c0c1-4a20-baab-b300994391d6.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Golvläggning i lägenhet, två hantverkare i Bellums-kläder",
+        "foreslaget_namn": "bellums-golvlaggning-lagenhet.webp"
+      },
+      {
+        "fil": "image125f4a82a6-2c96-4174-a665-4c73d0c2436f.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare demonterar gammalt kök",
+        "foreslaget_namn": "bellums-rivning-gammalt-kok.webp"
+      },
+      {
+        "fil": "image139ab02e24-f464-440c-9eca-df40d90e0900.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Rum med nyplatsad gipsskiva på väggarna, tomt",
+        "foreslaget_namn": "bellums-gipsning-vagg-forarbete.webp"
+      },
+      {
+        "fil": "image1481d02afb-46ef-42dd-b5dd-28e2bef9965a.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Nyinstallerat kök med mörkgröna luckor och guldfärgade handtag",
+        "foreslaget_namn": "bellums-kok-installerat-morkt-gront-resultat.webp"
+      },
+      {
+        "fil": "image1596fc3cae-a28a-4487-8618-9784bad98923.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare arbetar på trädäck utomhus, verktyg på bord",
+        "foreslaget_namn": "bellums-tradack-byggarbete-utomhus.webp"
+      },
+      {
+        "fil": "image16462dbeaf-372c-49ef-a23e-79bf0fc2e906.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare demonterar gammalt överskåp i kök med Bellums-logotyp på ryggen",
+        "foreslaget_namn": "bellums-demontering-overskap-kok.webp"
+      },
+      {
+        "fil": "image17787a40e5-a935-4330-9b1f-4dff63cd1d76.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare monterar möbel/skåp från platt-paket, inomhus",
+        "foreslaget_namn": "bellums-montering-moblering-inomhus.webp"
+      },
+      {
+        "fil": "image185421d063-4003-4e54-b10a-d73124c5d8ce.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Två hantverkare installerar golvbeläggning",
+        "foreslaget_namn": "bellums-golvbelaggning-installation.webp"
+      },
+      {
+        "fil": "image19a38704d4-9a6a-4313-9f74-d8cb8216bbb5.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Rivning av innervägg med regelstomme synlig, hantverkare med hammare",
+        "foreslaget_namn": "bellums-rivning-innervagg-regelstomme.webp"
+      },
+      {
+        "fil": "image20a92546c6-25a0-4cea-94f0-89eb8521cc81.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Fasadrenovering – tre hantverkare arbetar på husvägg utomhus",
+        "foreslaget_namn": "bellums-fasadrenovering-utomhus.webp"
+      },
+      {
+        "fil": "image21a5561230-d4a0-4f03-a94f-efc912b5b132.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Snickeriarbete – handgjort kök under montering, hantverkare böjer sig ned",
+        "foreslaget_namn": "bellums-snickeri-kok-under-montering.webp"
+      },
+      {
+        "fil": "image22cb1a77d5-a321-40ef-9ca1-2dec610768d1.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Tre hantverkare i lägenhet under renovering (kök syns) – liknar image03 men annan vinkel",
+        "dublett_av": "image033ca7d572 (liknande motiv, delvis)",
+        "foreslaget_namn": "bellums-team-renovering-kok-2.webp"
+      },
+      {
+        "fil": "image23d31ccaf2-77da-46db-9de5-c8330a7652f8.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Nylagt grått laminatgolv, inga människor",
+        "foreslaget_namn": "bellums-nylagt-laminatgolv-gratt-resultat.webp"
+      },
+      {
+        "fil": "image24d8716c6d-8c2e-40b1-b044-572cd816a4c7.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare demonterar kylskåp/inbyggnadsapparater i kök",
+        "foreslaget_namn": "bellums-demontering-vitvaror-kok.webp"
+      },
+      {
+        "fil": "image25e59b2ab8-0061-4a9c-a43b-8cd6569b3c7c.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Hantverkare kapar skiva med cirkelsåg och Festool-skena inomhus",
+        "foreslaget_namn": "bellums-snickerarbete-cirkelsag-festool.webp"
+      },
+      {
+        "fil": "image26f31facd1-176a-4cee-87a3-5fc628f9fa7a.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Två hantverkare bygger innervägg med regelkonstruktion och OSB",
+        "foreslaget_namn": "bellums-innervagg-regelkonstruktion-osb.webp"
+      },
+      {
+        "fil": "image27f38dc2db-282d-43c7-9e4d-55b2739d464f.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Utomhusarbete – rivning/demontering av glasveranda/uterum, hantverkare",
+        "foreslaget_namn": "bellums-rivning-uterum-glasveranda.webp"
+      },
+      {
+        "fil": "image283bcef4c7-bd27-4a04-8f0d-3a822756449f.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Nybyggt tak/pergola på uterum, vitt hus",
+        "foreslaget_namn": "bellums-nybyggt-tak-pergola-uterum.webp"
+      },
+      {
+        "fil": "image294c4c5e84-adb1-41c1-bd6b-f87775028b02.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Rivning/demontering av glasveranda – hantverkare på stege",
+        "dublett_av": "image27f38dc2db (samma plats och projekt, annan fas)",
+        "foreslaget_namn": "bellums-rivning-uterum-demontering-2.webp"
+      },
+      {
+        "fil": "image307ddebcbc-36d4-47ba-b37a-690fafa9c6c9.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare med köksmodul av trä i rum med gamla golv",
+        "foreslaget_namn": "bellums-koksmodul-trа-under-bygge.webp"
+      },
+      {
+        "fil": "image312133dff5-0903-4b5d-a91a-b7931a43e263.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Färdigt kök, mörkgrå luckor, marmorlik stänkskydd, LED-belysning",
+        "foreslaget_namn": "bellums-fardigt-kok-morkgra-marmor-resultat.webp"
+      },
+      {
+        "fil": "image32b28b94bc-67a6-4069-8dc3-18db75b449f4.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Kök under montering av handgjort snickeri, Festool-verktyg",
+        "dublett_av": "image21a5561230 (samma projekt, annan vinkel)",
+        "foreslaget_namn": "bellums-snickeri-kok-montering-2.webp"
+      },
+      {
+        "fil": "image33c9111545-cbc6-41ed-8a04-a63db41f44c8.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Två hantverkare lägger tak på uterum/glasveranda från stege",
+        "dublett_av": "image283bcef4c7 / image294c4c5e84 (samma projekt)",
+        "foreslaget_namn": "bellums-taklaggning-uterum-stege.webp"
+      },
+      {
+        "fil": "image34e9cda064-f27c-43d1-bdb7-aa619f79a3c1.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare kapar hål i tak med Makita sticksåg",
+        "foreslaget_namn": "bellums-takarbete-halgning-makita.webp"
+      },
+      {
+        "fil": "image350c0472ad-3111-4db5-95dd-458aa5f11d48.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Färdigt trädäck med pergola och insynsskydd, solig dag – resultatbild",
+        "foreslaget_namn": "bellums-fardigt-tradack-pergola-resultat.webp"
+      },
+      {
+        "fil": "image360fb651b4-a1b3-462a-8a70-0e3bbd4d6dab.jpg.webp",
+        "orientering": "liggande",
+        "motiv": "Nybyggt trädäck under uppförande, grön trädgård, blommande träd",
+        "foreslaget_namn": "bellums-altanbygge-tradgard.webp"
+      },
+      {
+        "fil": "image372ef95e20-7e32-4113-90bd-fdca2cafb3ea.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare demonterar gamla köksskåp – identisk plats med image16",
+        "dublett_av": "image16462dbeaf (samma kök och person, annan fas)",
+        "foreslaget_namn": "bellums-demontering-kok-fas2.webp"
+      },
+      {
+        "fil": "image383dc5047d-9d9a-451f-9c67-018a8ca56080.jpg.webp",
+        "orientering": "stående",
+        "motiv": "Hantverkare dammsuger efter rivning i sovrum (gammal mineralull synlig)",
+        "foreslaget_namn": "bellums-rivning-isolering-dammsugning.webp"
+      },
+      {
+        "fil": "image399f14f246-11fd-4f05-b1e4-34871ec91ec0.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Innervägg med regelkonstruktion och OSB – identisk plats med image26",
+        "dublett_av": "image26f31facd1 (exakt samma projekt och vägg, ej identisk bild men nästan)",
+        "foreslaget_namn": "bellums-innervagg-regelkonstruktion-2.webp"
+      },
+      {
+        "fil": "image4020c521b0-90e4-4497-82db-23ac11c75744.webp.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Kupa/takkupa med tre fönster – exteriorresultatbild",
+        "foreslaget_namn": "bellums-takkupa-trefönster-resultat.webp"
+      },
+      {
+        "fil": "image4185e16501-5c70-44b2-850a-c864b6b469f8.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Uterum under bygge – nytt tak med reglar monterat",
+        "dublett_av": "image41/42-serien (samma projekt som image29/33/41/42)",
+        "foreslaget_namn": "bellums-uterum-takreglar-under-bygge.webp"
+      },
+      {
+        "fil": "image42c7907a7f-87a6-4ffd-bf03-1ee7de768438.jpg.webp",
+        "orientering": "kvadrat (1:1)",
+        "motiv": "Uterum – hantverkare på tak och stege, lägger takbalk",
+        "dublett_av": "image33/29/41 (samma projekt)",
+        "foreslaget_namn": "bellums-uterum-taklaggning-2.webp"
+      }
+    ],
+
+    "dubbletter_sammanfattning": [
+      "image02 + image10: Samma person, samma kök (diskbänk-installation) – behåll image10 (högre upplösning)",
+      "image03 + image22: Liknande motiv (tre hantverkare i kok-renovering) – behåll image03 (liggande, bättre hero-format)",
+      "image26 + image39: Samma innervägg-projekt med regelkonstruktion – behåll image26 (stående, tydligare)",
+      "image16 + image37: Samma kök, samma person – behåll image37 (mer dynamisk bildkomposition)",
+      "image27 + image29 + image33 + image41 + image42: Samma uterum-projekt i olika faser – behåll image35 (resultatbild) + image42 (process) som representanter",
+      "image21 + image32: Samma snickeri-kök-projekt, olika vinklar – behåll båda om portfölj behövs, annars välj image21 (liggande)"
+    ],
+
+    "saknade_bildplatser": [
+      "Hero-bild med bredd minst 1920 px – befintliga bilder är 900–1260 px breda, inga når full HD. Starkaste kandidat är image03 (~1260 px bred) men kan behöva upskalas eller ersättas med professionell bild.",
+      "Om-oss-bild: Saknas representativ bild av teamet eller ägaren utanför eller i ett avslutat projekt för 'om oss'-sektionen. Befintliga bilder visar alltid pågående arbete (process), ingen 'stolt av resultatet'-bild med teamet.",
+      "Avslutade projektbilder för portfölj-sektion: De flesta bilder visar pågående arbete. 'Resultat'-bilder finns för kök (image31 – färdigt grått kök, image14 – färdigt grönt kök) och altan (image35 – pergola), men saknas för bad, hall och andra tjänster.",
+      "Porträttfoto för team/om-oss: Inga ansiktsporträtt finns – omöjligt att göra en teamsektion med riktiga foton.",
+      "Kundprofilbilder för testimonials: Inga porträttfoton på kunder.",
+      "Favicon/ikon: logotyp.webp kan konverteras men ett kvadratformat favicon (512×512 PNG) saknas.",
+      "OG-bild för sociala medier: Ingen dedikerad 1200×630 px bild för delning."
+    ]
+  },
+
+  "varningar": [
+    "Mallen levereras med body dir='rtl' (höger-till-vänster) på startsidan – detta är ett RTL-demo-läge. Måste tas bort i Astro; HTML ska ha lang='sv' och ingen RTL-attribut.",
+    "Kontaktformulärets fältnamn stämmer inte med labels: fältet 'email' har placeholder 'number', och fältet 'subject' har placeholder 'Email Address'. Formuläret måste korrigeras i Astro-implementationen.",
+    "Google Maps använder en hårdkodad API-nyckel (AIzaSyAuSiPhoDaOJ7aqtJVtQhYhLzwwJ7rQlmA) – denna nyckel tillhör mall-leverantören och ska INTE användas. Ersätt med iframe-embed från Google Maps eller ta bort kartan.",
+    "Inga FAQ-block finns i någon service-single-variant – FAQ måste byggas från grunden som Astro-komponent (rekommendation: details/summary).",
+    "Alla bilder från kunden är under 1300 px breda. Hero-sektionen kräver minst 1440–1920 px bred bild för god kvalitet på stora skärmar. Kunden bör leverera högre upplösning eller professionella foton.",
+    "Bildfilnamnen är maskinellt genererade hexadecimala strängar – de måste döpas om till SEO-vänliga namn enligt foreslaget_namn i spec:en innan de importeras i Astro.",
+    "Preloader finns kommenterad i mallen (div#elevate-load) – ska INTE aktiveras enligt prestandakraven.",
+    "RTL/LTR-switcher finns i DOM (div.rtl-ltr-switcher-btn) – ska tas bort helt i Astro.",
+    "Swiper-slider används för hero, tjänster, portfölj, testimonials och brands. Alla ska ersättas: hero → statisk bild eller CSS scroll-snap, tjänster → CSS grid, testimonials → CSS scroll-snap, brands → CSS marquee animation."
+  ]
+}

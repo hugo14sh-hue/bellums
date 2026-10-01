@@ -1,0 +1,169 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+  title="Om oss – Bellums Volym Två AB | Golvslippning & Hantverk"
+  description="Lär känna Bellums Volym Två AB – golvslippning och hantverk i Stockholmsregionen. 2 års garanti, F-skatt godkänd, 53+ genomförda uppdrag med 4,25/5 i betyg."
+  ogImage="/images/kund/bellums-altanbygge-tradgard.webp"
+>
+
+  <!-- Breadcrumb hero -->
+  <section class="breadcrumb-hero" aria-label="Om oss">
+    <img
+      src="/images/kund/bellums-altanbygge-tradgard.webp"
+      alt="Bellums bygger altan i trädgård"
+      class="breadcrumb-hero__bg"
+      width="1200"
+      height="800"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="breadcrumb-hero__content">
+        <h1>Om Bellums</h1>
+        <nav class="breadcrumb-nav" aria-label="Brödsmulor">
+          <a href="/">Hem</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span class="current">Om oss</span>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-gap">
+    <div class="container">
+      <div class="about-intro">
+        <div class="fade-in">
+          <img
+            src="/images/kund/bellums-golvlaggning-lagenhet.webp"
+            alt="Bellums hantverkare arbetar med golvläggning"
+            width="580"
+            height="440"
+            loading="lazy"
+            decoding="async"
+            style="border-radius: 4px;"
+          />
+        </div>
+        <div class="fade-in">
+          <span class="section-title__label" style="font-family:var(--font-button);font-weight:500;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-accent);display:block;margin-bottom:0.5rem;">Vårt företag</span>
+          <h2>Hantverkare med hjärtat i Stockholm</h2>
+          <p>Bellums Volym Två AB är ett hantverks- och byggföretag med adress i Solna. Vi hjälper privatpersoner och företag i hela Stockholmsregionen med golvslippning, lackering av trägolv, golvläggning och renovering.</p>
+          <p>Det vi är mest stolta över är kommunikationen med våra kunder – från första kontakt till avslutat uppdrag. Vi svarar snabbt, håller vad vi lovar och lämnar alltid 2 års garanti på utfört arbete.</p>
+          <p>Vi arbetar med godkänd F-skattsedel och kan erbjuda ROT-avdrag för privatpersoner vid kvalificerade hantverksarbeten.</p>
+          <a href="/kontakt" class="btn btn-primary" style="margin-top:1rem;">Kontakta oss</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Varför välja oss -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-label="Varför välja Bellums">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Varför Bellums</span>
+        <h2>Det här kan du räkna med</h2>
+        <p>Vi levererar hantverksarbeten i Stockholmsregionen med fokus på kommunikation, kvalitet och trygghet.</p>
+      </div>
+      <div class="why-choose-grid">
+        <div class="why-card fade-in">
+          <div class="number">53+</div>
+          <h3>Genomförda uppdrag</h3>
+          <p>Med 4,25 av 5 i genomsnittligt kundbetyg på Servicefinder vet vi vad som krävs för ett lyckat projekt. Kunder återkommer för fler uppdrag.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="number">2 år</div>
+          <h3>Garanti på allt arbete</h3>
+          <p>Vi lämnar 2 års garanti på alla utförda arbeten. Du ska känna dig trygg länge efter att golvet är lagt och lacken torkat.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="number">24h</div>
+          <h3>Svar inom 24 timmar</h3>
+          <p>Vi svarar på offertförfrågningar inom 24 timmar på vardagar. Enkel och snabb kommunikation – från offert till färdigt jobb.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="number">F-skatt</div>
+          <h3>Godkänd F-skattsedel</h3>
+          <p>Vi arbetar med godkänd F-skattsedel, vilket innebär trygg anlitning för dig som privatperson eller företag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontaktperson -->
+  <section class="section-gap" aria-label="Kontakt">
+    <div class="container">
+      <div style="max-width:680px;margin:0 auto;text-align:center;">
+        <span class="label" style="font-family:var(--font-button);font-weight:500;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-accent);display:block;margin-bottom:0.5rem;">Kom i kontakt</span>
+        <h2>Prata med oss direkt</h2>
+        <p style="color:var(--color-grey-text);margin-bottom:2rem;">Har du frågor om ett kommande projekt eller vill ha en kostnadsfri offert? Kontakta Hampus direkt eller fyll i formuläret – vi återkommer snabbt.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:+46709122589" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Ring 070-912 25 89
+          </a>
+          <a href="/kontakt" class="btn btn-dark">Skicka förfrågan</a>
+        </div>
+        <p style="margin-top:1.5rem;font-size:0.9rem;color:var(--color-grey-text);">
+          Hampus Holmberg · <a href="mailto:hampus@bellums.se" style="color:var(--color-accent);">hampus@bellums.se</a><br>
+          Öppettider: Mån–Fre 06:00–19:00 · Lördag 09:00–16:00
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VÅRA TJÄNSTER ===== -->
+  <section class="local-links section-gap" style="background:var(--color-grey-light);" aria-label="Utforska våra tjänster">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Tjänster</span>
+        <h2>Vad vi erbjuder</h2>
+        <p>Golvslippning, lackering och hantverk i Stockholm, Danderyd, Östermalm och Sollentuna.</p>
+      </div>
+      <div class="local-links__grid">
+        <a href="/golvslippning-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/></svg>
+          Golvslippning Stockholm
+        </a>
+        <a href="/hantverkare-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+          Hantverkare Stockholm
+        </a>
+        <a href="/golvslippning-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Danderyd
+        </a>
+        <a href="/golvslippning-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Östermalm
+        </a>
+        <a href="/golvslippning-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Golvslippning Sollentuna
+        </a>
+        <a href="/hantverkare-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare Danderyd
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+</script>

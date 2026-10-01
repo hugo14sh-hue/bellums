@@ -1,0 +1,248 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Hantverkare Östermalm",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Bellums Volym Två AB",
+    "telephone": "+46709122589",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Solna",
+      "addressCountry": "SE"
+    }
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Östermalm"
+  }
+};
+---
+
+<PageLayout
+  title="Hantverkare Östermalm – Bellums Volym Två AB"
+  description="Hantverkare med erfarenhet av sekelskifteslägenheter och BRF-fastigheter på Östermalm. Renovering, snickeri och golvarbeten längs Strandvägen och Karlaplan. Offert inom 24 h."
+  jsonLd={jsonLd}
+>
+
+  <!-- ===== BREADCRUMB-HERO ===== -->
+  <section class="breadcrumb-hero" aria-label="Hantverkare på Östermalm">
+    <img
+      class="breadcrumb-hero__bg"
+      src="/images/kund/bellums-team-renovering-lagenhet.webp"
+      alt="Bellums hantverkare arbetar med renovering i sekelskifteslägenhet på Östermalm"
+      width="1260"
+      height="945"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="container">
+      <div class="breadcrumb-hero__content">
+        <nav aria-label="Brödsmulor" class="breadcrumb-nav">
+          <ol>
+            <li><a href="/">Hem</a></li>
+            <li aria-hidden="true">›</li>
+            <li aria-current="page">Hantverkare Östermalm</li>
+          </ol>
+        </nav>
+        <h1>Hantverkare på Östermalm</h1>
+        <p>Vi renoverar och bygger om i Östermalms sekelskifteshus och storlägen­heter – med respekt för det ursprungliga bygget och krav på hög finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO-TEXT ===== -->
+  <section class="section-gap" aria-labelledby="intro-heading-ho">
+    <div class="container">
+      <div class="page-intro">
+        <div class="page-intro__text">
+          <span class="label">Östermalm – innerstaden med höga krav</span>
+          <h2 id="intro-heading-ho">Hantverk i jugend­fastigheter kräver noggrannhet</h2>
+          <p>Östermalm är en stadsdel i Stockholm som domineras av sekelskifteshus, jugendbyggnader och 1920-talsklassicism längs adresser som Strandvägen, Valhallavägen och Grev Turegatan. Paradlägenheter på 150–350 m² med 3,5–4 meters takhöjd – det är en annan typ av hantverksuppdrag än ett standardrenovering. Proportionerna är annorlunda, detaljerna är fler och förväntningarna på finish är högre. Vi på Bellums tar oss an den typen av jobb och levererar med samma noggrannhet oavsett om det är ett litet badrum eller ett komplett kök i en stor Östermalmslägenhet.</p>
+          <p>Att anlita hantverkare i en BRF på Östermalm kräver att du väljer ett företag med F-skatt och tecknade avtal – det är styrelsens krav och det är konsumentens trygghet. Vi arbetar med godkänd F-skattsedel, lämnar skriftlig offert och 2 års garanti. <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverket beskriver</a> vad ett korrekt hantverksavtal ska innehålla. ROT-avdrag gäller för bostadsrättsinnehavare i samma utsträckning som för husägare – du drar av 30 % av arbetskostnaden.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VAD INGÅR / PROCESS ===== -->
+  <section class="section-gap" style="background:var(--color-grey-light);" aria-labelledby="process-heading-ho">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">Vad vi gör</span>
+        <h2 id="process-heading-ho">Hantverksarbeten anpassade för Östermalms lägenheter</h2>
+      </div>
+      <div class="process-list">
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Köks- och inredningsrenovering</h3>
+            <p>Nytt kök i en stor sekelskifteslägenhet är ett projekt som kräver planering. Vi hjälper med allt från rivning av gammalt kök till installation av nytt – inklusive anpassning till äldre vägg­konstruktioner och bevarade originaldetaljer som stuckaturer och pardörrar.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M17 8C8 10 5.9 16.17 3.82 19.93c-.7 1.28.48 2.68 1.82 2.07C7.4 21 12 18.5 12 12c4 4.5 2.5 10 0 13 1.5 0 7-.5 9-6 1.5 4 1 9-1 12 1.5 0 6.5-.5 8-6 .5-2 1-5.5-2-7.5-2.5-1.5-3.5-3-3-5.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Parkett och golvarbeten</h3>
+            <p>Fiskbensgolv, fisktallsmönster och äldre parkett i Östermalms lägenheter kräver varsam slipning och rätt ytbehandling. Vi arbetar dammfritt och i samordning med BRF-krav – hör av dig om ni behöver dokumentation om metod.</p>
+          </div>
+        </div>
+        <div class="process-item fade-in">
+          <div class="process-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" fill="currentColor">
+              <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Snickeri och platsbyggd inredning</h3>
+            <p>Platsbyggda bokhyllor, garderober och förvaringslösningar anpassade till höga tak och oregelbundna väggar. Vi mäter, planerar och bygger snickeri som passar husets proportioner och ägarens behov.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section-gap faq-section" aria-label="Vanliga frågor om hantverkare på Östermalm">
+    <div class="container">
+      <div class="section-title">
+        <span class="label">FAQ</span>
+        <h2>Vanliga frågor om hantverksuppdrag på Östermalm</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Hur hanterar ni arbete i en stor sekelskifteslägenhet på Östermalm?</summary>
+          <div class="faq-answer">
+            <p>Stora lägenheter längs Strandvägen eller Karlaplan ställer krav på noggrann planeringslogistik – materialhantering i fastigheter utan last-hiss, samordning med grannar och BRF, och arbete rum för rum för att hålla bostaden beboelig. Vi är vana vid den miljön och kommunicerar öppet under hela projektet.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Kräver min BRF på Östermalm att ni har F-skatt och skriftliga avtal?</summary>
+          <div class="faq-answer">
+            <p>Ja, de allra flesta bostadsrättsföreningar i innerstaden kräver att anlitade hantverkare kan visa F-skattsedel och att arbetet dokumenteras med skriftliga avtal. Vi uppfyller dessa krav. Vi lämnar alltid skriftlig offert och avtal innan arbetet börjar, och vi kan bistå med den dokumentation din förening begär. Mer om dina rättigheter finns hos <a href="https://www.konsumentverket.se/varor-och-tjanster/anlita-hantverkare/" rel="noopener noreferrer" target="_blank">Konsumentverket</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Gäller ROT-avdrag för renovering i en Östermalmslägenhet?</summary>
+          <div class="faq-answer">
+            <p>Ja, ROT-avdrag gäller för bostadsrättsinnehavare som är folkbokförda i lägenheten – du drar av 30 % av vår arbetskostnad mot inkomstskatten. Vi drar av beloppet direkt på fakturan och hanterar administrationen. Krav: vi måste ha F-skattsedel, vilket vi har. Se <a href="https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete.4.2e56d4ba1202f95012080002966.html" rel="noopener noreferrer" target="_blank">Skatteverkets information om ROT-avdrag</a>.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Vad ingår i er garanti?</summary>
+          <div class="faq-answer">
+            <p>Vi lämnar 2 års garanti på allt utfört arbete, utöver den lagstadgade reklamationsrätten på tre år enligt <a href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/konsumenttjanstlagen-1985716_sfs-1985-716/" rel="noopener noreferrer" target="_blank">konsumenttjänstlagen</a>. Om något inte stämmer med arbetet kontaktar du oss och vi åtgärdar det. Vi är nöjda när du är nöjd.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Utför ni arbeten i hela innerstaden eller bara på Östermalm?</summary>
+          <div class="faq-answer">
+            <p>Vi arbetar i hela Stockholms innerstad – Östermalm, Vasastan, Kungsholmen, Södermalm och övriga stadsdelar. Vi tar oss också an uppdrag i kranskommunerna Danderyd och Sollentuna. Är ni osäkra på om vi arbetar i ditt område, ring eller hör av dig via formuläret så svarar vi direkt.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA-BANNER ===== -->
+  <section class="cta-banner" aria-label="Begär offert">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2>Planerar du en renovering på Östermalm?</h2>
+        <p>Vi hjälper dig från offert till färdigt projekt. Svar inom 24 timmar, F-skatt godkänd, 2 års garanti.</p>
+        <div class="cta-banner__btns">
+          <a href="/kontakt" class="btn btn-primary">Begär offert</a>
+          <a href="tel:+46709122589" class="btn btn-dark">Ring 070-912 25 89</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTERNA LÄNKBLOCKAR ===== -->
+  <section class="local-links section-gap" aria-label="Fler tjänster och områden">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="label">Fler områden</span>
+        <h2>Vi arbetar i hela Stockholm</h2>
+      </div>
+      <div class="local-links__grid">
+        <a href="/hantverkare-stockholm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare i Stockholm stad
+        </a>
+        <a href="/hantverkare-danderyd" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Renovering i Danderyds villor
+        </a>
+        <a href="/hantverkare-sollentuna" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Hantverkare i Sollentuna
+        </a>
+        <a href="/golvslippning-ostermalm" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 7H4c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-1 7H5V9h14v5z"/></svg>
+          Golvslippning på Östermalm
+        </a>
+        <a href="/om-oss" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          Om Bellums Volym Två AB
+        </a>
+        <a href="/kontakt" class="local-link-card">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Kontakta oss
+        </a>
+      </div>
+    </div>
+  </section>
+
+</PageLayout>
+
+<style>
+.breadcrumb-hero__content p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0; }
+.breadcrumb-nav ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0 0 1rem; font-size: 0.875rem; }
+
+.page-intro__text { max-width: 780px; }
+.page-intro__text h2 { margin-top: 0.5rem; }
+
+.process-list { display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin-top: 2rem; }
+.process-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+.process-icon { flex-shrink: 0; width: 52px; height: 52px; background: var(--color-accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; }
+.process-item h3 { margin: 0 0 0.5rem; }
+.process-item p { margin: 0; color: var(--color-grey-text); }
+
+.faq-list { display: flex; flex-direction: column; gap: 0.75rem; max-width: 800px; }
+.faq-item { border: 1px solid var(--color-grey-mid); border-radius: 4px; overflow: hidden; }
+.faq-question { padding: 1.25rem 1.5rem; font-family: var(--font-button); font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after { content: '+'; font-size: 1.5rem; color: var(--color-accent); transition: transform 0.2s; }
+details[open] .faq-question::after { content: '−'; }
+.faq-answer { padding: 0 1.5rem 1.25rem; color: var(--color-grey-text); font-size: 0.9375rem; }
+.faq-answer p { margin: 0; }
+.faq-answer a { color: var(--color-accent); }
+</style>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => observer.observe(el));
+  }
+</script>

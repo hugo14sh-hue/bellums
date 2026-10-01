@@ -1,0 +1,140 @@
+{
+  "version": "1.0",
+  "skapad": "2026-10-01",
+  "kund": "Bellums Volym Två AB",
+  "bransch": "Golvslippning & Hantverk",
+  "sidor": [
+    {
+      "fil": "golvslippning-stockholm.astro",
+      "sokord": "Golvslippning",
+      "ort": "Stockholm",
+      "inledningsvinkel": "Stockholms bestånd av äldre trägolv och ROT-avdragets ekonomiska logik – varför slipa istället för byta",
+      "styckeordning": ["lokal kontext + ekonomi", "process (3 steg)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["pris/ROT", "process/tid", "lokala förutsättningar (BRF)", "vad som ingår (äldre parkett)", "täckning/geografi"],
+      "lokala_referenser": ["Vasastan", "Kungsholmen", "Södermalm", "Bromma", "Enskede"],
+      "externa_kallor": [
+        "Skatteverket ROT (i intro + FAQ)",
+        "Konsumentverket anlita hantverkare (i FAQ)"
+      ]
+    },
+    {
+      "fil": "golvslippning-danderyd.astro",
+      "sokord": "Golvslippning",
+      "ort": "Danderyd",
+      "inledningsvinkel": "Villadominerat bestånd – massivt trä och Djursholms historiska villastock kräver periodunderhåll",
+      "styckeordning": ["lokal villakaraktär", "process (3 steg inkl. besiktning)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["pris/ROT", "lokala förutsättningar (Djursholm äldre trägolv)", "process/tid", "täckning/geografi", "ytbehandling/rekommendation"],
+      "lokala_referenser": ["Djursholm", "Stocksund", "Enebyberg", "Kevinge", "Nora"],
+      "externa_kallor": [
+        "Skatteverket ROT (i intro)",
+        "Konsumentverket anlita hantverkare (i FAQ)"
+      ]
+    },
+    {
+      "fil": "golvslippning-ostermalm.astro",
+      "sokord": "Golvslippning",
+      "ort": "Östermalm",
+      "inledningsvinkel": "Jugendfastigheternas golv – fiskbensmönster och originalparkett kräver varsam teknik, BRF-krav i fokus",
+      "styckeordning": ["historisk karaktär + material", "process (varsam slipning, BRF, ytbehandling)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["vad som ingår (fiskbensgolv teknik)", "lokala förutsättningar (BRF krav)", "process/tid (stor lägenhet)", "pris/ROT bostadsrätt", "ingen identisk FAQ som Stockholm-sidan"],
+      "lokala_referenser": ["Strandvägen", "Karlaplan", "Narvavägen", "Valhallavägen", "Grev Turegatan"],
+      "externa_kallor": [
+        "Skatteverket ROT (i intro)",
+        "Golvbranschen GBR (i intro – dammfria metoder)",
+        "Konsumentverket anlita hantverkare (i FAQ)"
+      ]
+    },
+    {
+      "fil": "golvslippning-sollentuna.astro",
+      "sokord": "Golvslippning",
+      "ort": "Sollentuna",
+      "inledningsvinkel": "Brett bostadsbestånd – kombination av äldre villor vid Edsviken och nyproduktion i Silverdal, ROT-logik",
+      "styckeordning": ["lokal variation + ROT", "process (bedömning, slipning, ytbehandling)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["hur man bokar", "täckning/geografi (hela kommunen)", "pris/ROT villa", "vad som ingår (nyare fabriksgolv)", "ytbehandling/familjehushåll"],
+      "lokala_referenser": ["Norrviken", "Edsviken", "Silverdal", "Tureberg", "Häggvik"],
+      "externa_kallor": [
+        "Skatteverket ROT (i intro)",
+        "Konsumentverket anlita hantverkare (i FAQ)"
+      ]
+    },
+    {
+      "fil": "hantverkare-stockholm.astro",
+      "sokord": "Hantverkare",
+      "ort": "Stockholm",
+      "inledningsvinkel": "Stockholms variation i bostadstyper kräver bred kompetens – och trygg anlitning via F-skatt, avtal, reklamationsrätt",
+      "styckeordning": ["bred kompetens för Stockholm", "tjänster (snickeri, golv, montage)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["lokala förutsättningar (vad kräva av hantverkare i Stockholm)", "pris/ROT", "process/tid (snabb service)", "vad som ingår (ej el/VVS)", "garanti/reklamation"],
+      "lokala_referenser": ["Kungsholmen", "Vasastan", "Älvsjö", "Bromma", "Enskede"],
+      "externa_kallor": [
+        "Konsumentverket anlita hantverkare (i intro + FAQ)",
+        "Konsumenttjänstlagen riksdagen.se (i intro + FAQ garanti)"
+      ]
+    },
+    {
+      "fil": "hantverkare-danderyd.astro",
+      "sokord": "Hantverkare",
+      "ort": "Danderyd",
+      "inledningsvinkel": "Villaägare i Danderyd ser huset som ett livsprojekt – renovering med respekt för husets karaktär och utan mersälj",
+      "styckeordning": ["villa och livsprojekt-vinkel", "tjänster (kök/bad, golv/snickeri, utomhus)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["vad som ingår (tjänstetyper)", "lokala förutsättningar (Djursholm, grannar)", "pris/ROT villa", "process/tid (köksrenovering)", "täckning/geografi (grannkommuner)"],
+      "lokala_referenser": ["Djursholm", "Stocksund", "Enebyberg", "Danderyds kommun", "Solna/Lidingö"],
+      "externa_kallor": [
+        "Konsumentverket anlita hantverkare (i intro)",
+        "Skatteverket ROT (i FAQ)"
+      ]
+    },
+    {
+      "fil": "hantverkare-ostermalm.astro",
+      "sokord": "Hantverkare",
+      "ort": "Östermalm",
+      "inledningsvinkel": "Jugendfastigheter och höga krav på finish – proportioner och detaljer som kräver noggrannare hantverk än standardrenovering",
+      "styckeordning": ["historisk karaktär + hög finish", "tjänster (kök/originaldetaljer, parkett, platsbyggd inredning)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["vad som ingår (logistik stor lägenhet)", "lokala förutsättningar (BRF krav F-skatt)", "pris/ROT bostadsrätt", "garanti/reklamation", "täckning/geografi (hela innerstaden)"],
+      "lokala_referenser": ["Strandvägen", "Valhallavägen", "Grev Turegatan", "Karlavägen", "Östermalms innerstaden"],
+      "externa_kallor": [
+        "Konsumentverket anlita hantverkare (i intro + FAQ)",
+        "Skatteverket ROT (i FAQ)",
+        "Konsumenttjänstlagen riksdagen.se (i FAQ garanti)"
+      ]
+    },
+    {
+      "fil": "hantverkare-sollentuna.astro",
+      "sokord": "Hantverkare",
+      "ort": "Sollentuna",
+      "inledningsvinkel": "Sollentuna bygger och renoverar – kombination av äldre villor som behöver upprustning och nyproduktion som behöver montage",
+      "styckeordning": ["förändring och kombination", "tjänster (kök/bad, golv, altan/utomhus)", "FAQ", "CTA", "interna länkar"],
+      "faq_kategorier": ["täckning/geografi (hela kommunen)", "pris (köksrenovering + ROT)", "process/tid", "vad som ingår (utomhusarbeten/altan)", "garanti/reklamation"],
+      "lokala_referenser": ["Silverdal", "Norrviken", "Edsviken", "Häggvik", "Rotebro", "Tureberg"],
+      "externa_kallor": [
+        "Skatteverket ROT (i intro)",
+        "Konsumentverket anlita hantverkare (i FAQ)",
+        "Konsumenttjänstlagen riksdagen.se (i FAQ garanti)"
+      ]
+    }
+  ],
+  "anvanda_inledningsvinklar": [
+    "Stockholms bestånd av äldre trägolv – ekonomi och materialvärde",
+    "Villadominerat bestånd – massivt trä och periodunderhåll",
+    "Jugendfastigheternas golv – varsam teknik och BRF-krav",
+    "Brett bostadsbestånd med variation – äldre + nyproduktion",
+    "Stockholms variation i bostadstyper – bred kompetens + trygg anlitning",
+    "Villa som livsprojekt – renovering med respekt",
+    "Jugendfastigheter och hög finish – proportioner och detaljer",
+    "Kommuns förändring – äldre villor + nyproduktion"
+  ],
+  "anvanda_faq_kategorier_per_sida": {
+    "golvslippning-stockholm": ["pris/ROT", "process/tid", "BRF-krav", "äldre parkett", "geografi"],
+    "golvslippning-danderyd": ["pris/ROT villa", "Djursholm äldre golv", "process/tid villa", "geografi kommunen", "ytbehandling rekommendation"],
+    "golvslippning-ostermalm": ["fiskbensgolv teknik", "BRF tillstånd", "process/tid stor lägenhet", "ROT bostadsrätt"],
+    "golvslippning-sollentuna": ["hur man bokar", "geografi kommunen", "pris/ROT", "fabriksgolv nyare", "familjehushåll ytbehandling"],
+    "hantverkare-stockholm": ["vad kräva Stockholm", "ROT hantverk", "snabb service", "ej el/VVS", "garanti/reklamation"],
+    "hantverkare-danderyd": ["tjänstetyper", "Djursholm grannar", "ROT villa", "köksrenovering tid", "grannkommuner"],
+    "hantverkare-ostermalm": ["logistik stor lägenhet", "BRF F-skatt krav", "ROT bostadsrätt", "garanti reklamation", "geografi innerstaden"],
+    "hantverkare-sollentuna": ["geografi kommunen", "köksrenovering pris ROT", "tid renovering", "utomhus altan", "garanti reklamation"]
+  },
+  "notering_duplicate_content_risk": [
+    "LÅGT RISK: Golvslippning-sidorna varierar i inledningsvinkel, tjänstefokus (Östermalm = fiskbensgolv/dammfritt, Danderyd = massivt trä/villabesiktning, Sollentuna = kombinationsprojekt, Stockholm = bred innerstad), styckeordning och FAQ-kategorier.",
+    "LÅGT RISK: Hantverkare-sidorna varierar i inledningsvinkel (livsprojekt vs. jugend-precision vs. kommunens förändring), tjänstelistning (Östermalm = platsbyggd inredning/originaldetaljer, Danderyd = utomhus/trappor, Sollentuna = altan/utomhusmiljö, Stockholm = brett montage/installation) och FAQ-kategorier.",
+    "NOTERA FÖR QA: Hantverkare-Stockholm och Hantverkare-Östermalm båda nämner BRF-sammanhang – men Stockholm-sidan fokuserar på bredd/tillgänglighet och Östermalm-sidan fokuserar på de specifika kraven i jugendfastigheter. Bör kontrolleras av QA-agenten med cosine similarity."
+  ]
+}
